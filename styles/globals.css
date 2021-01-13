@@ -1,16 +1,69 @@
-html,
+/* *,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans);
+
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* DO NOT REMOVE THE STAR - Otherwise header tags will be bold*/
+html * {
+  font-family: "Kumbh Sans", serif;
+  font-weight: lighter;
 
-* {
   box-sizing: border-box;
+}
+
+html,
+body,
+body > div:first-child,
+div#__next > div {
+  height: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  background-image: url("https://i.ibb.co/MgfQw3V/background-winter.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  display: flexbox;
+}
+
+section {
+  /* background-color: rgba(0,0,0, 0.8); */
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

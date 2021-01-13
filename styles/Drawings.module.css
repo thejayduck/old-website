@@ -1,0 +1,67 @@
+.row {
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+  border: 3px solid #f1f1f1;
+
+  margin: auto auto 50px auto;
+
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 90%;
+  max-height: 70%;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.contentElement {
+  overflow: hidden;
+
+  display: grid;
+  background: rgba(77, 77, 77, 0.349);
+  margin: 5px;
+  padding: 6px;
+  text-align: center;
+
+  float: left;
+
+  width: 420px;
+  justify-content: center;
+}
+
+.tool {
+  border: 8px solid rgba(255, 255, 255, 0);
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.37);
+
+  white-space: pre-line;
+  line-height: 1.2;
+  width: 300px;
+  margin: 10px;
+  justify-self: center;
+  text-overflow: ellipsis;
+}
+
+.column {
+  color: white;
+  flex: 25%;
+  width: 95%;
+  /* max-width: 50%; */
+  padding: 0 4px;
+}
+
+.image img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .row {
+    width: auto;
+  }
+  /* .content-element {
+        width: fit-content;
+    } */
+}

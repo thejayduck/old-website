@@ -1,0 +1,64 @@
+{
+    "gameList":
+    [        
+        {
+            "title": "Treasured Memories",
+            "itchID": "826293",
+            "genre": "Visual Novel",
+            "about": "30* Minute Visual Novel Submission to Winter VN Jam 2020"
+        },
+        {
+            "title": "Onefold Crush",
+            "itchID": "710941",
+            "genre": "Visual Novel",
+            "about": "Short Visual Novel Submission to Yaoi Game Jam 2020"
+        },
+        {
+            "title": "Lunar Lander Remake!",
+            "itchID": "382508",
+            "genre": "Platformer",
+            "about": "Remake of Classic Lunar Lander"
+        }
+    ],
+    "drawingList":
+    [
+        {
+            "title": "Mascot character submission for a discord server.",
+            "url": "https://i.ibb.co/6W00Ghx/Mascot-Chara-Compressed.jpg",
+            "software": "MediBang Paint Pro",
+            "hardware": "Wacom Intuos Draw CTL-490",
+            "resolution": "7015x4960 - 600dpi"
+        }
+    ],
+    "faq":
+    [
+        {
+            "question": "When did you start programming?",
+            "answer": "I started programming around 2015."
+        },
+        {
+            "question": "What do you usually program?",
+            "answer": "I usually create games using Unity, but sometimes I also create software."
+        },
+        {
+            "question": "When did you start drawing?",
+            "answer": "I started drawing around 2017."
+        },
+        {
+            "question": "Do you take commissions?",
+            "answer": "No, as much as I would like to, I am not that confident in my skills to take them."
+        },
+        {
+            "question": "Do you draw fan-art?",
+            "answer": "No. I only draw original characters, and I don't draw the same character more than twice."
+        },
+        {
+            "question": "Why MediBang Paint Pro?",
+            "answer": "When I first started digital art I tried many drawing software, and out of the bunch, MediBang Paint Pro felt the smoothest to work on."
+        },
+        {
+            "question": "Why Digital Art?",
+            "answer": "I also do traditional however the convenience of digital is unbeatable."
+        }
+    ]
+}

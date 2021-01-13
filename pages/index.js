@@ -1,65 +1,82 @@
 import Head from 'next/head'
+import { getFAQData } from '../data'
 import styles from '../styles/Home.module.css'
+import Navbar from './navbar'
 
-export default function Home() {
+export default function Home({faq}) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+          <title>TheJayDuck - ABOUT</title>
+          <meta property="og:description" content="About Page" />
       </Head>
+      <Navbar/>
+      <div className={styles.detailContainer}>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <h1>I am Arda!</h1>
+        <h3>
+            And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.<br/>
+            You can scroll down further to read FAQ.
+        </h3>
+        <div className={styles.toolContainer}>
+            <div className={styles.tool}>
+                <h3>Programming Languages</h3>
+                <p>C#, PHP, Rust*</p>
+            </div>
+            <div className={styles.tool}>
+                <h3>Software</h3>
+                <p>
+                    Visual Studio Code<br/>
+                    MediBang Paint Pro<br/>
+                    Visual Studio 2019<br/>
+                    Unity Engine<br/>
+                    Stride Engine*
+                </p>
+            </div>
+            <div className={styles.tool}>
+                <h3>Hardware</h3>
+                <p>
+                    Custom Built Desktop<br/>
+                    Acer Swift 3 SF314-58G<br/>
+                    Wacom Intuos Draw CTL-490
+                </p>
+            </div>
+            <hr/>
+            <p>* is put for software/language I am still learning</p>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <br/>
+        <h1>FAQ</h1>
+        <section>
+            <div className={styles.container}>
+                <div className={styles.accordion}>
+                  {
+                    faq.map((q, idx) =>
+                      <div className={styles.accordionItem} id={`question${idx}`}>
+                        <a className={styles.accordionLink} href={`#question${idx}`}>
+                            Q: {q.question}
+                            <i className={`${styles.icon} fas fa-plus ${styles.faPlus}`}></i>
+                            <i className={`${styles.icon} fas fa-minus ${styles.faMinus}`}></i>
+                        </a>
+                        <div className={styles.answer}>
+                            <p>
+                              {q.answer}
+                            </p>
+                        </div>
+                      </div>
+                    )
+                  }
+                </div>
+            </div>
+        </section>
+      </div>
     </div>
   )
+}
+
+export async function getStaticProps({ params }) {
+  return {
+      props: {
+        faq: getFAQData(),
+      }
+  }
 }
