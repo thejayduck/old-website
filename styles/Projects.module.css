@@ -42,7 +42,7 @@
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 720px) {
   .pageContent {
     width: auto;
   }
@@ -50,8 +50,8 @@
     width: 100%;
   }
   .contentElement iframe {
-    width: 540px;
-    width: fit-content;
+    /* width: 540px; */
+    width: max-content;
     justify-self: center;
   }
 }
