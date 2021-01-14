@@ -14,6 +14,7 @@ body {
 
 /* DO NOT REMOVE THE STAR - Otherwise header tags will be bold*/
 * {
+  scroll-behavior: smooth;
   font-family: "Kumbh Sans", serif;
   font-weight: lighter;
   box-sizing: border-box;
@@ -38,7 +39,6 @@ html {
 }
 
 section {
-  /* background-color: rgba(0,0,0, 0.8); */
   width: 100%;
   height: auto;
 
