@@ -1,17 +1,16 @@
-.row {
+.pageContent {
   background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+  color: white;
   border: 3px solid #f1f1f1;
-
   margin: auto auto 50px auto;
-
   padding: 50px;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-
   width: 95.65%;
   max-height: 70%;
   overflow: scroll;
+
+  display: flex;
+  flex-wrap: wrap;
   overflow-y: auto;
   overflow-x: auto;
   justify-content: center;
@@ -46,7 +45,6 @@
 }
 
 .column {
-  color: white;
   flex: 25%;
   width: 95%;
   /* max-width: 50%; */

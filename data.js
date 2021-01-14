@@ -1,13 +1,13 @@
 import data from './data.json'
 
-export function getFAQData(){
+export function getFAQData() {
     return data.faq
 }
 
-export function getGameListData(){
+export function getGameListData() {
     return data.gameList
 }
 
-export function getDrawingListData(){
+export function getDrawingListData() {
     return data.drawingList
 }

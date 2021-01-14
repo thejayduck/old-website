@@ -11,7 +11,7 @@ export default function Home({faq}) {
           <meta property="og:description" content="About Page" />
       </Head>
       <Navbar/>
-      <div className={styles.detailContainer}>
+      <div className={styles.pageContent}>
 
         <h1>I am Arda!</h1>
         <h3>

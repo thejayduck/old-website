@@ -11,7 +11,7 @@ export default function Projects({ gameList }) {
                 <meta property="og:description" content="Projects Page" />
             </Head>
             <Navbar />
-            <div className={styles.projectContent}>
+            <div className={styles.pageContent}>
                 {
                     gameList.map(q =>
                         q !== undefined ? (

@@ -11,7 +11,7 @@ export default function Drawings({drawingList}){
                 <meta property="og:description" content="Drawings Page" />
             </Head>
             <Navbar/>
-            <div className={styles.row}>
+            <div className={styles.pageContent}>
                 <div className={styles.column}>
                     {
                         drawingList.map (q => 
