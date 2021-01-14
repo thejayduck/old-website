@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { getDrawingListData } from '../data'
 import styles from '../styles/Drawings.module.css'
 import Navbar from "./navbar"
+import { motion } from 'framer-motion'
 
 export default function Drawings({drawingList}){
     return(
@@ -11,17 +12,19 @@ export default function Drawings({drawingList}){
                 <meta property="og:description" content="Drawings Page" />
             </Head>
             <Navbar/>
-            <div className={styles.pageContent}>
+            <div className={`${styles.pageContent} pageContent`}>
                 <div className={styles.column}>
                     {
                         drawingList.map (q => 
-                            <div className={styles.contentElement}>
-                                <div className={styles.image}>
+                           <motion.div className={styles.contentElement} 
+                                animate={{ opacity: [0, 1] }}
+                                transition={{duration: .8 }}
+                            >                                <div className={styles.image}>
                                     <h2>{q.title}</h2>
                                     <img src={q.url}/>
                                 </div>
                                 <div className={styles.tool}>{q.software}<br/>{q.hardware}<br/>{q.resolution}</div>
-                            </div>
+                            </motion.div>
                         )
                     }
                 </div>
@@ -33,7 +36,7 @@ export default function Drawings({drawingList}){
 export async function getStaticProps({ params }) {
     return {
         props: {
-          drawingList: getDrawingListData(),
+            drawingList: getDrawingListData(),
         }
     }
-  }
+}

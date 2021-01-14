@@ -3,19 +3,19 @@
     [        
         {
             "title": "Treasured Memories",
-            "itchID": "826293",
+            "id": "826293",
             "genre": "Visual Novel",
             "about": "30* Minute Visual Novel Submission to Winter VN Jam 2020"
         },
         {
             "title": "Onefold Crush",
-            "itchID": "710941",
+            "id": "710941",
             "genre": "Visual Novel",
             "about": "Short Visual Novel Submission to Yaoi Game Jam 2020"
         },
         {
             "title": "Lunar Lander Remake!",
-            "itchID": "382508",
+            "id": "382508",
             "genre": "Platformer",
             "about": "Remake of Classic Lunar Lander"
         }

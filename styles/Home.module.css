@@ -73,16 +73,6 @@
 }
 
 .pageContent {
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
-  color: white;
-  border: 3px solid #f1f1f1;
-  margin: auto auto 50px auto;
-  padding: 50px;
-  text-align: center;
-  width: 95.65%;
-  max-height: 70%;
-  overflow: scroll;
-
   padding-top: 20px;
   padding-bottom: 20px;
   overflow-y: auto;
