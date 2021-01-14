@@ -13,10 +13,9 @@ body {
 }
 
 /* DO NOT REMOVE THE STAR - Otherwise header tags will be bold*/
-html * {
+* {
   font-family: "Kumbh Sans", serif;
   font-weight: lighter;
-
   box-sizing: border-box;
 }
 
