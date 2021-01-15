@@ -12,14 +12,14 @@ export default function Drawings({drawingList}){
                 <meta property="og:description" content="Drawings Page" />
             </Head>
             <Navbar/>
-            <div className={`${styles.pageContent} pageContent`}>
+            <motion.div className={`${styles.pageContent} pageContent`}
+                animate={{ opacity: [0, 1] }}
+            >
                 <div className={styles.column}>
                     {
                         drawingList.map (q => 
-                           <motion.div className={styles.contentElement} 
-                                animate={{ opacity: [0, 1] }}
-                                transition={{duration: .8 }}
-                            >                                <div className={styles.image}>
+                           <motion.div className={styles.contentElement}>
+                                <div className={styles.image}>
                                     <h2>{q.title}</h2>
                                     <img src={q.url}/>
                                 </div>
@@ -28,7 +28,7 @@ export default function Drawings({drawingList}){
                         )
                     }
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

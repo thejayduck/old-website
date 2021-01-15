@@ -12,15 +12,13 @@ export default function Projects({ gameList }) {
                 <meta property="og:description" content="Projects Page" />
             </Head>
             <Navbar />
-            <div className={`${styles.pageContent} pageContent`}>
+            <motion.div className={`${styles.pageContent} pageContent`}
+                animate={{opacity: [0, 1]}}
+            >
                 {
                     gameList.map(q =>
                         q !== undefined ? (
-
-                            <motion.div className={styles.contentElement} 
-                                animate={{ opacity: [0, 1] }}
-                                transition={{duration: .8 }}
-                            >
+                            <div className={styles.contentElement}>
                                 <h1>{q.title}</h1>
                                 <iframe frameborder="0" src={`https://itch.io/embed/${q.id}?bg_color=000000&fg_color=ffffff&link_color=9D00DA&border_color=000000`}></iframe>
                                 <div className={styles.about}>
@@ -29,11 +27,11 @@ export default function Projects({ gameList }) {
                                 <div className={styles.gameGenre}>
                                     {q.genre}
                                 </div>
-                            </motion.div>
+                            </div>
                         ) : <p> Nothing to See Here </p>
                     )
                 }
-            </div>
+            </motion.div>
         </div>
     )
 }
