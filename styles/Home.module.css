@@ -92,6 +92,11 @@
   margin: 1rem;
 }
 
+.tool a {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (max-width: 720px) {
   .pageContent {
     width: auto;

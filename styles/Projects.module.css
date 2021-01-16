@@ -16,6 +16,15 @@
   justify-content: center;
 }
 
+.contentElement a {
+  text-decoration: none;
+  color: white;
+}
+
+.contentElement i {
+  font-size: 13px;
+}
+
 .contentElement iframe {
   width: 530px;
   padding: 10px;
