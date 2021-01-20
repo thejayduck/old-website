@@ -29,7 +29,8 @@ export default function Home({faq}) {
                 <h3>Software</h3>
                 <p>
                     Visual Studio Code<br/>
-                    MediBang Paint Pro<br/>
+                    MediBang Paint Pro (PC)<br/>
+                    Infinite Painter (Android)<br/>
                     Visual Studio 2019<br/>
                     Unity Engine<br/>
                     Stride Engine*
@@ -79,7 +80,7 @@ export default function Home({faq}) {
 export async function getStaticProps({ params }) {
   return {
       props: {
-        faq: getFAQData(),
+        faq: getFAQData(),  
       }
   }
 }
