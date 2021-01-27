@@ -26,19 +26,19 @@
     "drawingList":
     [
         {
-            "title": "Mascot character submission for a discord server.",
-            "url": "https://i.ibb.co/ZBRd2HG/mascotchara-compressed.jpg",
-            "software": "MediBang Paint Pro",
-            "hardware": "Wacom Intuos Draw CTL-490",
-            "resolution": "7015x4960 - 600dpi",
-            "r18": "false"
-        },
-        {
             "title": "Practice art on tab s6.",
             "url": "https://i.ibb.co/k8G7pX5/Project-19.png",
             "software": "Infinite Painter",
             "hardware": "Samsung Galaxy Tab S6 Lite",
             "resolution": "1402x2493",
+            "r18": "false"
+        },
+        {
+            "title": "Mascot character submission for a discord server.",
+            "url": "https://i.ibb.co/ZBRd2HG/mascotchara-compressed.jpg",
+            "software": "MediBang Paint Pro",
+            "hardware": "Wacom Intuos Draw CTL-490",
+            "resolution": "7015x4960 - 600dpi",
             "r18": "false"
         }
     ],
