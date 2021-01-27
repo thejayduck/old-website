@@ -46,6 +46,15 @@
   width: 100%;
 }
 
+.imageFilter {
+  filter: blur(10px);
+  transition: filter 300ms;
+}
+
+.imageFilter:hover {
+  filter: blur(0px);
+}
+
 @media only screen and (max-width: 720px) {
   .pageContent {
     width: auto;
