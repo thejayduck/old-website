@@ -29,14 +29,14 @@ export default function Navbar() {
                 <li id="drawings" className={styles.right}><Link href="/drawings">Drawings</Link></li>
                 <li id="projects" className={styles.right}><Link href="/projects">Projects</Link></li>
                 <li id="index" className={styles.right}><Link href="/">About</Link></li>
-
+                
                 <li className={styles.right}>
                     <ul className={styles.social}>
                         <li id="itchio" title="Check My Itch.io Page" className={styles.right}><a href="https://thejayduck.itch.io/" className="fab fa-itch-io" target="_blank"/></li>
                         <li id="twitter" title="Check My Twitter Page" className={styles.right}><a href="https://twitter.com/thejayduck" className="fab fa-twitter" target="_blank"/></li>
+                        <li id="deviantart" title="Check My DeviantArt Page" className={styles.right}><a href="https://deviantart.com/thejayduck" className="fab fa-deviantart" target="_blank"/></li>
                         <li id="github" title="Check My Github Page" className={styles.right}><a href="https://github.com/thejayduck" className="fab fa-github" target="_blank"/></li>
                         <li id="mail" title="Contact Mail" className={styles.right}><a href="mailto:ardafevzi.armutcu@gmail.com" className="fa fa-envelope" target="_blank"/></li>
-
                         <li id="ko-fi" title="Support Me on Ko-fi!" className={styles.right}><a href="https://ko-fi.com/T6T3ILN1" className="cib-ko-fi" target="_blank"/></li>
                     </ul>
                 </li>
