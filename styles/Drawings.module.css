@@ -47,12 +47,12 @@
 }
 
 .imageFilter {
-  filter: blur(10px);
-  transition: filter 300ms;
+  filter: blur(10px) grayscale(100%);
+  transition: filter 100ms;
 }
 
 .imageFilter:hover {
-  filter: blur(0px);
+  filter: blur(0px) grayscale(0%);
 }
 
 @media only screen and (max-width: 720px) {
