@@ -7,9 +7,10 @@
 }
 
 .contentElement {
-  background: rgba(77, 77, 77, 0.349);
+  background-color: rgba(77, 77, 77, 0.349);
 
   overflow: hidden;
+
   display: grid;
   margin: 5px;
   padding: 6px;
@@ -17,7 +18,8 @@
 
   float: left;
 
-  width: 400px;
+  width: min-content;
+  /* width: 400px */
   justify-content: center;
 }
 
@@ -35,7 +37,6 @@
 }
 
 .column {
-  flex: 25%;
   /* width: 95%; */
   /* max-width: 50%; */
   padding: 0 4px;
@@ -43,7 +44,10 @@
 }
 
 .image img {
-  width: 100%;
+  /* width: 100%; */
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
 }
 
 .imageFilter {

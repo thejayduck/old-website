@@ -21,7 +21,7 @@ export default function Drawings({drawingList}){
                             q.r18 == true ? (
                                 <div className={styles.contentElement}>
                                     <div className={styles.image}>
-                                        <h2>{q.title}</h2>
+                                        {/* <h2>{q.title}</h2> */}
                                         <img className={styles.imageFilter} src={q.url}/>
                                     </div>
                                     <div className={styles.tool}>{q.software}<br/>{q.hardware}<br/>{q.resolution}</div>
@@ -29,7 +29,7 @@ export default function Drawings({drawingList}){
                             ) :
                                 <div className={styles.contentElement}>
                                     <div className={styles.image}>
-                                        <h2>{q.title}</h2>
+                                        {/* <h2>{q.title}</h2> */}
                                         <img src={q.url}/>
                                     </div>
                                     <div className={styles.tool}>{q.software}<br/>{q.hardware}<br/>{q.resolution}</div>
