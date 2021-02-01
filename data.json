@@ -31,7 +31,7 @@
             "software": "Infinite Painter",
             "hardware": "Samsung Galaxy Tab S6 Lite",
             "resolution": "1500x1460",
-            "r18": "true"
+            "r18": true
         },
         {
             "title": "Practice art on tab s6.",
@@ -39,7 +39,7 @@
             "software": "Infinite Painter",
             "hardware": "Samsung Galaxy Tab S6 Lite",
             "resolution": "1198x1998",
-            "r18": "false"
+            "r18": false
         },
         {
             "title": "Practice art on tab s6.",
@@ -47,7 +47,7 @@
             "software": "Infinite Painter",
             "hardware": "Samsung Galaxy Tab S6 Lite",
             "resolution": "1402x2493",
-            "r18": "false"
+            "r18": false
         },
         {
             "title": "Mascot character submission for a discord server.",
@@ -55,7 +55,7 @@
             "software": "MediBang Paint Pro",
             "hardware": "Wacom Intuos Draw CTL-490",
             "resolution": "7015x4960 - 600dpi",
-            "r18": "false"
+            "r18": false
         }
     ],
     "faq":

@@ -18,7 +18,7 @@ export default function Drawings({drawingList}){
                 <div className={styles.column}>
                     {
                         drawingList.map (q => 
-                            q.r18 == "true" ? (
+                            q.r18 == true ? (
                                 <div className={styles.contentElement}>
                                     <div className={styles.image}>
                                         <h2>{q.title}</h2>
