@@ -40,7 +40,7 @@ export default function Projects({ gameList }) {
     )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
     return {
         props: {
             gameList: getGameListData(),

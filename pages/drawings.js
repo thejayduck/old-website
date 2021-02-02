@@ -33,7 +33,7 @@ export default function Drawings({drawingList}){
     )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
     return {
         props: {
             drawingList: getDrawingListData(),

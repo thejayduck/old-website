@@ -77,7 +77,7 @@ export default function Home({faq}) {
   )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   return {
       props: {
         faq: getFAQData(),  
