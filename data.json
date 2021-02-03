@@ -1,6 +1,9 @@
 {
-    "gameList":
-    [        
+    "current": {
+        "title": "Magical Girl Game Jam #3",
+        "url": "https://itch.io/jam/magical-girl-game-jam-3"
+    },
+    "gameList": [
         {
             "title": "Treasured Memories",
             "id": "826293",
@@ -23,15 +26,7 @@
             "url": "https://thejayduck.itch.io/lunar-lander-remake"
         }
     ],
-    "drawingList":
-    [
-        {
-            "url": "https://i.ibb.co/pXnYTVj/Project-34-3-2.png",
-            "software": "Infinite Painter",
-            "hardware": "Samsung Galaxy Tab S6 Lite",
-            "resolution": "1500x1460",
-            "r18": true
-        },
+    "drawingList": [
         {
             "url": "https://i.ibb.co/JCCnxjk/Project-33-4-2.png",
             "software": "Infinite Painter",
@@ -54,8 +49,7 @@
             "r18": false
         }
     ],
-    "faq":
-    [
+    "faq": [
         {
             "question": "When did you start programming?",
             "answer": "I started programming around 2015."
