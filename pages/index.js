@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
 import { motion } from 'framer-motion'
 
-export default function Home({faq}) {
+export default function Home({faq, current}) {
   return (
     <div>
       <Head>
@@ -21,6 +21,14 @@ export default function Home({faq}) {
             You can scroll down further to read FAQ.
         </h3>
         <div className={styles.toolContainer}>
+            {/* {
+              current.map(q =>
+                      <div className={styles.tool}>
+                          <h3>Current Project</h3>
+                          <p>{q.title}</p>
+                      </div>
+                    )
+            } */}
             <div className={styles.tool}>
                 <h3>Programming Languages</h3>
                 <p>C#, PHP, Rust*</p>
@@ -80,7 +88,7 @@ export default function Home({faq}) {
 export async function getStaticProps() {
   return {
       props: {
-        faq: getFAQData(),  
-      }
+        faq: getFAQData(),
+      },
   }
 }

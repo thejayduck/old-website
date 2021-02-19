@@ -37,7 +37,7 @@ export default function Navbar() {
                         <li id="deviantart" title="Check My DeviantArt Page" className={styles.right}><a href="https://deviantart.com/thejayduck" className="fab fa-deviantart" target="_blank"/></li>
                         <li id="github" title="Check My Github Page" className={styles.right}><a href="https://github.com/thejayduck" className="fab fa-github" target="_blank"/></li>
                         <li id="mail" title="Contact Mail" className={styles.right}><a href="mailto:ardafevzi.armutcu@gmail.com" className="fa fa-envelope" target="_blank"/></li>
-                        <li id="ko-fi" title="Support Me on Ko-fi!" className={styles.right}><a href="https://ko-fi.com/T6T3ILN1" className="cib-ko-fi" target="_blank"/></li>
+                        {/* <li id="ko-fi" title="Support Me on Ko-fi!" className={styles.right}><a href="https://ko-fi.com/T6T3ILN1" className="cib-ko-fi" target="_blank"/></li> */}
                     </ul>
                 </li>
 
