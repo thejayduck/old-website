@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { getFAQData } from '../data'
 import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
-import { motion } from 'framer-motion'
 
 export default function Home({faq}) {
   return (
@@ -12,9 +11,8 @@ export default function Home({faq}) {
           <meta property="og:description" content="About Page" />
       </Head>
       <Navbar/>
-      <motion.div className={`${styles.pageContent} pageContent`} 
-        animate={{ opacity: [0, 1] }}
-      >
+      <div className={`${styles.pageContent} pageContent`}>
+
         <h1>I am Arda!</h1>
         <h3>
             And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.<br/>
@@ -72,7 +70,7 @@ export default function Home({faq}) {
                 </div>
             </div>
         </section>
-      </motion.div>
+      </div>
     </div>
   )
 }

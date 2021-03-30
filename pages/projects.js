@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { getGameListData } from '../data'
 import styles from '../styles/Projects.module.css'
 import Navbar from "./navbar"
-import { motion } from 'framer-motion'
 
 export default function Projects({ gameList }) {
     return (
@@ -12,9 +11,7 @@ export default function Projects({ gameList }) {
                 <meta property="og:description" content="Projects Page" />
             </Head>
             <Navbar />
-            <motion.div className={`${styles.pageContent} pageContent`}
-                animate={{opacity: [0, 1]}}
-            >
+            <div className={`${styles.pageContent} pageContent`}>
                 {
                     gameList.map(q =>
                         q !== undefined ? (
@@ -35,7 +32,7 @@ export default function Projects({ gameList }) {
                         ) : <p> Nothing to See Here </p>
                     )
                 }
-            </motion.div>
+            </div>
         </div>
     )
 }
