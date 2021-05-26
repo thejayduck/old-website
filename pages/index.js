@@ -59,7 +59,6 @@ export default function Home({ data }) {
                     <footer>* is put for software/language I am still learning</footer>
                 </div>
                 <br />
-                <h1>FAQ</h1>
                 <FAQData data={data.faq} />
             </div>
         </div>
