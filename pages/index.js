@@ -1,9 +1,20 @@
 import Head from 'next/head'
-import { getFAQData } from '../data'
+import FAQData from './components/faqData'
 import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
 
-export default function Home({faq}) {
+export async function getStaticProps() {
+    const res = await fetch('https://api.jsonbin.io/b/5ffecc0c68f9f835a3dea6bc/1')
+    const data = await res.json();
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -48,37 +59,8 @@ export default function Home({faq}) {
         </div>
         <br/>
         <h1>FAQ</h1>
-        <section>
-            <div className={styles.container}>
-                <div className={styles.accordion}>
-                  {
-                    faq.map((q, idx) =>
-                      <div className={styles.accordionItem} id={`question${idx}`}>
-                        <a className={styles.accordionLink} href={`#question${idx}`}>
-                            Q: {q.question}
-                            <i className={`${styles.icon} fas fa-plus ${styles.faPlus}`}></i>
-                            <i className={`${styles.icon} fas fa-minus ${styles.faMinus}`}></i>
-                        </a>
-                        <div className={styles.answer}>
-                            <p>
-                              {q.answer}
-                            </p>
-                        </div>
-                      </div>
-                    )
-                  }
-                </div>
-            </div>
-        </section>
+        <FAQData data={data.faq}/>
       </div>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  return {
-      props: {
-        faq: getFAQData(),
-      },
-  }
 }

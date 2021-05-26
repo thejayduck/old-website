@@ -1,10 +1,21 @@
 import Head from 'next/head'
-import { getDrawingListData } from '../data'
+import DrawingData from './components/drawingData'
 import styles from '../styles/Drawings.module.css'
 import Navbar from "./navbar"
 // import { motion } from 'framer-motion'
 
-export default function Drawings({drawingList}){
+export async function getStaticProps() {
+    const res = await fetch('https://api.jsonbin.io/b/5ffecc0c68f9f835a3dea6bc/1')
+    const data = await res.json();
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
+export default function Drawings({ data }){
     return(
         <div>
             <Head>
@@ -16,30 +27,8 @@ export default function Drawings({drawingList}){
                 animate={{ opacity: [0, 1] }}
             ></motion.div> */}
             <div className={`${styles.pageContent} pageContent`}>
-                <div className={styles.column}>
-                    {
-                        drawingList.map (q =>
-                            q !== undefined ? (
-                                <div className={styles.contentElement}>
-                                    <div className={styles.image}>
-                                        {/* <h2>{q.title}</h2> */}
-                                        {q.r18 ? (<img className={styles.imageFilter} src={q.url}/>) : (<img src={q.url}/>)}
-                                    </div>
-                                    <div className={styles.tool}>{q.software}<br/>{q.hardware}<br/>{q.resolution}</div>
-                                </div>
-                            ) : <p> Nothing to See Here </p>
-                        )
-                    }
-                </div>
+                <DrawingData data={data.drawingList} />
             </div>
         </div>
     )
-}
-
-export async function getStaticProps() {
-    return {
-        props: {
-            drawingList: getDrawingListData(),
-        }
-    }
 }
