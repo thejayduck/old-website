@@ -5,10 +5,11 @@ import Navbar from "./navbar"
 // import { motion } from 'framer-motion'
 
 export async function getStaticProps() {
-    const res = await fetch('https://api.jsonbin.io/b/5ffecc0c68f9f835a3dea6bc/1')
+    const res = await fetch('https://gist.githubusercontent.com/thejayduck/50a8e7a15ecad2f1b564e51eb1e1e69c/raw')
     const data = await res.json();
 
     return {
+        revalidate: 10,
         props: {
             data
         }
