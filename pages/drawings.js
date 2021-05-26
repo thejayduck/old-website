@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import DrawingData from './components/drawingData'
+import DrawingData from '../components/drawingData'
 import styles from '../styles/Drawings.module.css'
 import Navbar from "./navbar"
 // import { motion } from 'framer-motion'
@@ -17,6 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Drawings({ data }){
+
     return(
         <div>
             <Head>

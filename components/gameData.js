@@ -1,4 +1,4 @@
-import styles from '../../styles/Projects.module.css'
+import styles from '../styles/Projects.module.css'
 
 export default function GameData({ data }) {
     return (

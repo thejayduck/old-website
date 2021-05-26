@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import GameData  from './components/gameData'
+import GameData  from '../components/gameData'
 import styles from '../styles/Projects.module.css'
 import Navbar from "./navbar"
 
