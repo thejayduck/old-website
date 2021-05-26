@@ -3,7 +3,7 @@ import styles from '../../styles/Projects.module.css'
 export default function GameData({ data }) {
     return (
         data.map(q =>
-            q !== undefined ? (
+            q ? (
                 <div className={styles.contentElement}>
                     <h1>
                         <a target="_blank" href={q.url}> 

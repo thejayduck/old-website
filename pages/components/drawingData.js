@@ -5,7 +5,7 @@ export default function DrawingData({ data }) {
     <div className={styles.column}>
         {
             data.map (q =>
-                q !== null ? (
+                q ? (
                     <div className={styles.contentElement}>
                         <div className={styles.image}>
                             {/* <h2>{q.title}</h2> */}
