@@ -4,12 +4,13 @@ export default function DrawingData({ data }) {
     return (
         <div className={styles.column}>
             {
-                data.map (q =>
+                data.reverse().map (q =>
                     q ? (
                         <div className={styles.contentElement}>
                             <div className={styles.image}>
                                 {/* <h2>{q.title}</h2> */}
                                 {q.r18 ? (<img className={styles.imageFilter} src={q.url}/>) : (<img src={q.url}/>)}
+                                <div className={styles.warning}>{q.r18 ? (<h1>NSFW</h1>) : <h1/>}</div>
                             </div>
                             {/* <div className={styles.tool}>{q.software}<br/>{q.hardware}<br/>{q.resolution}</div> */}
                         </div>

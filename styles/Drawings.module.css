@@ -44,6 +44,11 @@
   justify-content: center;
 }
 
+.image {
+  position: relative;
+  display: inline-block;
+}
+
 .image img {
   /* width: 100%; */
   /* width: 350px; */
@@ -58,6 +63,23 @@
 
 .imageFilter:hover {
   filter: blur(0px) grayscale(0%);
+}
+
+.warning {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  width: 60%;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 @media only screen and (max-width: 720px) {
