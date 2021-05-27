@@ -24,7 +24,9 @@ export default function Projects({ data }) {
             </Head>
             <Navbar/>
             <div className={`${styles.pageContent} pageContent`}>
-                <GameData data={data.gameList} />
+                <h1>Itch.io Projects</h1>
+                <hr/>
+                <GameData data={data.gameList}/>
             </div>
         </div>
     )

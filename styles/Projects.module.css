@@ -1,8 +1,13 @@
 .pageContent {
-  display: flex;
-  flex-wrap: wrap;
   overflow-y: auto;
   overflow-x: hidden;
+  justify-content: center;
+}
+
+.contentParent {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
   justify-content: center;
 }
 

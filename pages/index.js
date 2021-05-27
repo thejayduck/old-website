@@ -24,12 +24,11 @@ export default function Home({ data }) {
             </Head>
             <Navbar />
             <div className={`${styles.pageContent} pageContent`}>
-
                 <h1>I am Arda!</h1>
                 <h3>
                     And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.<br />
-            You can scroll down further to read FAQ.
-        </h3>
+                    You can scroll down further to read FAQ.
+                </h3>
                 <div className={styles.toolContainer}>
                     <div className={styles.tool}>
                         <h3>Programming Languages</h3>
@@ -39,21 +38,21 @@ export default function Home({ data }) {
                         <h3>Software</h3>
                         <p>
                             Visual Studio Code<br />
-                    MediBang Paint Pro (PC)<br />
-                    Infinite Painter (Android)<br />
-                    Visual Studio 2019<br />
-                    Unity Engine<br />
-                    Stride Engine*
-                </p>
+                            MediBang Paint Pro (PC)<br />
+                            Infinite Painter (Android)<br />
+                            Visual Studio 2019<br />
+                            Unity Engine<br />
+                            Stride Engine*
+                        </p>
                     </div>
                     <div className={styles.tool}>
                         <h3>Hardware</h3>
                         <p>
                             Custom Built Desktop<br />
-                    Acer Swift 3 SF314-58G<br />
-                    Wacom Intuos Draw CTL-490<br />
-                    Samsung Galaxy Tab S6 Lite
-                </p>
+                            Acer Swift 3 SF314-58G<br />
+                            Wacom Intuos Draw CTL-490<br />
+                            Samsung Galaxy Tab S6 Lite
+                        </p>
                     </div>
                     <hr />
                     <footer>* is put for software/language I am still learning</footer>
