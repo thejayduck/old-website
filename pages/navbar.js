@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styles from '../styles/Navbar.module.css'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -10,6 +11,11 @@ export default function Navbar() {
 
     return (
         <div>
+
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+            </Head>
+
             <style>
                 {
                     `            
