@@ -57,10 +57,10 @@
 }
 
 @media only screen and (max-width: 720px) {
-  .pageContent {
+  /* .pageContent {
     width: auto;
     padding: 20px;
-  }
+  } */
   .contentElement {
     width: 100%;
   }

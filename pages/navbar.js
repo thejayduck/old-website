@@ -25,7 +25,7 @@ export default function Navbar() {
             <link rel="stylesheet" href="https://icons.coreui.io/css/all.min.04afe194583853dbc897278f1cd35603f76521c9272735b5c39cc8a10f3e6adf.css" />
 
             <ul className={styles.topnav}>
-                <li id="title" className={styles.title}><Link href="/">TheJayDuck</Link></li>
+                <li id="title" className={styles.title}><img src="https://i.ibb.co/kcw3rCd/icon-circle.png"/><Link href="/">TheJayDuck</Link></li>
                 <li id="drawings" className={styles.right}><Link href="/drawings">Drawings</Link></li>
                 <li id="projects" className={styles.right}><Link href="/projects">Projects</Link></li>
                 <li id="index" className={styles.right}><Link href="/">About</Link></li>
