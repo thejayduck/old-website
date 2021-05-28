@@ -4,7 +4,7 @@ export default function DrawingData({ data }) {
     return (
         <div className={styles.column}>
             {
-                data.reverse().map (q =>
+                data.map (q =>
                     q ? (
                         <div className={styles.contentElement}>
                             <div className={styles.image}>
