@@ -40,6 +40,8 @@ export default function Navbar() {
                     <ul className={styles.social}>
                         <li id="itchio" title="Itch.io Page" className={styles.right}><a href="https://thejayduck.itch.io/" className="fab fa-itch-io" target="_blank" /></li>
                         <li id="twitter" title="Twitter Page" className={styles.right}><a href="https://twitter.com/thejayduck" className="fab fa-twitter" target="_blank" /></li>
+                        <li id="toyhouse" title="Toyhou.se Page" className={styles.right}><a href="https://toyhou.se/TheJayDuck" className="fas fa-home" target="_blank" /></li>
+                        <li id="artfol" title="Artfol.me Page" className={styles.right}><a href="https://artfol.me/thejayduck" className="fas fa-palette" target="_blank" /></li>
                         <li id="deviantart" title="DeviantArt Page" className={styles.right}><a href="https://deviantart.com/thejayduck" className="fab fa-deviantart" target="_blank" /></li>
                         <li id="github" title="Github Page" className={styles.right}><a href="https://github.com/thejayduck" className="fab fa-github" target="_blank" /></li>
                         <li id="mail" title="Contact Mail" className={styles.right}><a href="mailto:ardafevzi.armutcu@gmail.com" className="fa fa-envelope" target="_blank" /></li>
