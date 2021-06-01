@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import GameData  from '../components/gameData'
+import GameData from '../components/gameData'
 import styles from '../styles/Projects.module.css'
 import Navbar from "./navbar"
 
@@ -22,11 +22,11 @@ export default function Projects({ data }) {
                 <title>TheJayDuck - PROJECTS</title>
                 <meta property="og:description" content="Projects Page" />
             </Head>
-            <Navbar/>
+            <Navbar />
             <div className={`${styles.pageContent} pageContent`}>
                 <h1>Itch.io Projects</h1>
-                <hr/>
-                <GameData data={data.gameList}/>
+                <hr />
+                <GameData data={data.gameList} />
             </div>
         </div>
     )

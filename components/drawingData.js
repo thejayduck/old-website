@@ -8,8 +8,8 @@ export default function DrawingData({ data }) {
             {
                 React.Children.toArray(data.map(q =>
                     q ? (
-                        <ImageData data={q}/>
-                    ) : <p> Nothing to See Here </p>   
+                        <ImageData data={q} />
+                    ) : <p> Nothing to See Here </p>
                 ))
             }
         </div>

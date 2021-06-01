@@ -16,15 +16,15 @@ export async function getStaticProps() {
     }
 }
 
-export default function Drawings({ data }){
+export default function Drawings({ data }) {
 
-    return(
+    return (
         <div>
             <Head>
                 <title>TheJayDuck - DRAWINGS</title>
                 <meta property="og:description" content="Drawings Page" />
             </Head>
-            <Navbar/>
+            <Navbar />
             {/* <motion.div className={`${styles.pageContent} pageContent`}
                 animate={{ opacity: [0, 1] }}
             ></motion.div> */}

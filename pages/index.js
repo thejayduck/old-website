@@ -40,9 +40,7 @@ export default function Home({ data }) {
                             Visual Studio Code<br />
                             MediBang Paint Pro (PC)<br />
                             Infinite Painter (Android)<br />
-                            Visual Studio 2019<br />
                             Unity Engine<br />
-                            Stride Engine*
                         </p>
                     </div>
                     <div className={styles.tool}>
