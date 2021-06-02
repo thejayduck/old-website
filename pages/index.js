@@ -8,10 +8,10 @@ export async function getStaticProps() {
     const data = await res.json();
 
     return {
-        revalidate: 10,
         props: {
             data
-        }
+        },
+        revalidate: 10
     }
 }
 
@@ -23,6 +23,9 @@ export default function Home({ data }) {
                 <meta property="og:description" content="About Page" />
             </Head>
             <Navbar />
+            <div>
+
+            </div>
             <div className={`${styles.pageContent} pageContent`}>
                 <h1>I am Arda!</h1>
                 <h3>
@@ -32,7 +35,7 @@ export default function Home({ data }) {
                 <div className={styles.toolContainer}>
                     <div className={styles.tool}>
                         <h3>Programming Languages</h3>
-                        <p>C#, PHP, Rust*</p>
+                        <p>C#, PHP, Rust*, JavaScript</p>
                     </div>
                     <div className={styles.tool}>
                         <h3>Software</h3>

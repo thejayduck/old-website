@@ -8,10 +8,10 @@ export async function getStaticProps() {
     const data = await res.json();
 
     return {
-        revalidate: 10,
         props: {
             data
-        }
+        },
+        revalidate: 10
     }
 }
 
@@ -24,8 +24,6 @@ export default function Projects({ data }) {
             </Head>
             <Navbar />
             <div className={`${styles.pageContent} pageContent`}>
-                <h1>Itch.io Projects</h1>
-                <hr />
                 <GameData data={data.gameList} />
             </div>
         </div>
