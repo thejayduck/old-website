@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import GameData from '../components/gameData'
+import GithubData from '../components/githubData'
 import styles from '../styles/Projects.module.css'
 import Navbar from "./navbar"
 
@@ -25,6 +26,7 @@ export default function Projects({ data }) {
             <Navbar />
             <div className={`${styles.pageContent} pageContent`}>
                 <GameData data={data.gameList} />
+                <GithubData data={data.githubList} />
             </div>
         </div>
     )

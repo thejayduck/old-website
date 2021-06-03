@@ -4,58 +4,6 @@
   justify-content: center;
 }
 
-.contentParent {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.contentElement {
-  background-color: rgba(77, 77, 77, 0.349);
-
-  display: grid;
-  margin: 5px;
-  padding: 5px;
-  width: fit-content;
-  justify-content: center;
-}
-
-.contentElement a {
-  text-decoration: none;
-  color: white;
-}
-
-.contentElement i {
-  font-size: 13px;
-}
-
-.contentElement iframe {
-  width: 530px;
-  padding: 10px;
-}
-
-.about {
-  overflow-wrap: break-word;
-  text-align: center;
-  width: 90%;
-  margin: 10px;
-  justify-self: center;
-}
-
-.gameGenre {
-  border: 8px solid rgba(255, 255, 255, 0);
-  border-radius: 0.4rem;
-  background-color: rgba(0, 0, 0, 0.37);
-
-  white-space: nowrap;
-  width: 300px;
-  margin: 10px;
-  justify-self: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @media only screen and (max-width: 720px) {
   .pageContent {
     width: auto;

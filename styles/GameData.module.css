@@ -1,0 +1,90 @@
+.contentParent {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.contentElement {
+  background-color: var(--jet);
+  border-radius: 0.4rem;
+  position: relative;
+
+  display: grid;
+  margin: 5px;
+  padding: 5px;
+  width: fit-content;
+  justify-content: center;
+}
+
+.contentElement:hover .aboutCover {
+  opacity: 1;
+}
+
+.contentElement a {
+  text-decoration: none;
+  color: white;
+}
+
+.contentElement i {
+  font-size: 13px;
+}
+
+.contentElement iframe {
+  width: 530px;
+  padding: 10px;
+}
+
+.aboutCover {
+  opacity: 0;
+
+  position: absolute;
+  border: 8px solid rgba(255, 255, 255, 0);
+  border-radius: 0.4rem;
+  background-color: var(--rich-black);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-self: center;
+
+  transition: opacity 230ms ease-in-out;
+}
+
+.about {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  justify-self: center;
+}
+
+.gameGenre {
+  border: 8px solid rgba(255, 255, 255, 0);
+  border-radius: 0.4rem;
+  background-color: var(--timberwolf);
+  color: black;
+
+  white-space: nowrap;
+  width: 300px;
+  margin: auto;
+  justify-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+@media only screen and (max-width: 720px) {
+  .contentElement {
+    width: 100%;
+  }
+  .contentElement iframe {
+    /* width: 540px; */
+    width: max-content;
+    justify-self: center;
+  }
+}

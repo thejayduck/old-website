@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  /* padding:  10px; */
+
+  /* max-width: 80rem; */
+  /* padding: 0 1.5rem; */
+}
+
+.accordionItem {
+  background-color: var(--jet);
+  border-radius: 0.4rem;
+
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.accordionLink {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+}
+
+.accordionLink i {
+  color: white;
+  padding: 0.5rem;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.4rem;
+
+  background-color: var(--rich-black);
+
+  transition: max-height 650ms;
+}
+
+.answer::before {
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 100%;
+  background-color: var(--dark-orchid);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.accordionItem:target .answer {
+  max-height: 30rem;
+}
+
+.accordionLink .faMinus {
+  display: none;
+}
+
+.accordionItem:target .accordionLink .faPlus {
+  display: none;
+}
+.accordionItem:target .accordionLink .faMinus {
+  display: block;
+}

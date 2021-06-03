@@ -6,6 +6,15 @@
     box-sizing: inherit;
 } */
 
+:root {
+  --dark-orchid: hsl(283, 81%, 47%);
+  --rich-black: hsl(260, 14%, 4%, 0.9);
+  --jet: hsl(30, 2%, 16%);
+  /* --davys-grey: hsl(36, 3%, 32%); */
+  --timberwolf: hsl(46, 15%, 83%);
+  --crimson: hsl(352, 70%, 50%); /* OTHER */
+}
+
 @import url(https://fonts.googleapis.com/css?family=Kumbh+Sans);
 
 body {
@@ -48,9 +57,10 @@ section {
 }
 
 .pageContent {
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+  background-color: var(--rich-black); /* Black w/opacity/see-through */
   color: white;
-  border: 3px solid #f1f1f1;
+  border: 3px solid #ffffff;
+  border-radius: 0.4em;
   margin: auto auto 50px auto;
   padding: 50px;
 

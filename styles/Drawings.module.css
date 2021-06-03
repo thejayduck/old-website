@@ -8,8 +8,9 @@
 
 .contentElement {
   position: relative;
+  border-radius: 0.4rem;
 
-  background-color: rgba(77, 77, 77, 0.349);
+  background-color: var(--jet);
   overflow: hidden;
   display: grid;
   margin: 5px;
@@ -34,7 +35,7 @@
   bottom: 10px;
   border: 8px solid rgba(255, 255, 255, 0);
   border-radius: 0.4rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--rich-black);
   width: 300px;
   margin: 10px;
   padding: 0;

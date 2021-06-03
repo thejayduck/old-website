@@ -1,4 +1,12 @@
-const baseURL = (repo) =>
-    `https://api.github.com/repos/thejayduck/${repo}`;
+export default async (req, res) => {
+    const url = `https://api.github.com/repos/thejayduck/lightnoveltracker`
+    const response = await fetch(url);
+    const json = response.json();
+    const repos = Object.keys(json);
 
-export default baseURL;
+    console.log(repos);
+
+    return res.status(200).json({
+        repos
+    });
+}

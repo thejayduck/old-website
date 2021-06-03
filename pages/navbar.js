@@ -20,7 +20,7 @@ export default function Navbar() {
                 {
                     `            
                     .${styles.topnav} #${pathname} {
-                        background-color: rgba(157,0,218);
+                        background-color: var(--dark-orchid);
                         color: white;
                     }
                     `
