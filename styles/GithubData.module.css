@@ -6,6 +6,8 @@
 }
 
 .contentElement {
+  overflow: hidden;
+
   background-color: var(--jet);
   /* background: linear-gradient(46deg, #df8fdc 0%, var(--dark-orchid) 82%); */
   border-radius: 0.4rem;
@@ -16,6 +18,16 @@
   padding: 5px;
   width: fit-content;
   justify-content: center;
+}
+
+.colorData {
+  /* content: ""; */
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: var(--dark-orchid);
+  top: 0%;
+  transform: translateY(-50%);
 }
 
 .contentElement:hover .aboutCover {

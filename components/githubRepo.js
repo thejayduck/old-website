@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 export default function GithubRepo({ data, image }) {
 
     const [repoData, setRepoData] = useState(null);
+    const [colorData, setColorData] = useState(null);
 
     useEffect(async () => {
         const res = await fetch(`https://api.github.com/repos/thejayduck/${data}`)
@@ -19,10 +20,20 @@ export default function GithubRepo({ data, image }) {
 
     }, [])
 
+    useEffect(async () => {
+        const res = await fetch(`https://api.github.com/gists/564dd064f4eb8688051d55f61d3754ae`)
+        const jsonData = await res.json();
+        const content = JSON.parse(jsonData.files["scriptColors.json"].content);
+
+        setColorData(content[repoData.language] ?? "#a217d9");
+    }, [])
+
+
     return (
         <div className={styles.contentElement}>
             {
                 repoData ? <>
+                    <div className={styles.colorData} style={{ backgroundColor: colorData }} />
                     <div className={styles.repoContent}>
                         {image && <img className={styles.repoCover} src={image} />}
                         <h2>
