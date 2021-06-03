@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function DrawingData({ data }) {
     return (
-        <div className={styles.column}>
+        <ul className={styles.contentParent}>
             {
                 React.Children.toArray(data.map(q =>
                     q ? (
@@ -12,6 +12,6 @@ export default function DrawingData({ data }) {
                     ) : <p> Nothing to See Here </p>
                 ))
             }
-        </div>
+        </ul>
     );
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ImageData({ data }) {
     return (
-        <div className={styles.contentElement}>
+        <li className={styles.contentElement}>
             <div className={styles.image}>
                 {data.r18 ? (<img className={styles.imageFilter} src={data.url} />) : (<img src={data.url} />)}
                 <div className={styles.warning}>{data.r18 ? (<h1>NSFW</h1>) : <h1 />}</div>
@@ -16,6 +16,6 @@ export default function ImageData({ data }) {
                 </div>
 
             }
-        </div>
+        </li>
     );
 }

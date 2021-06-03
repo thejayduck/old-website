@@ -4,11 +4,11 @@ export default function GameData({ data }) {
     return (
         <div>
             <h1>Itch.io Projects</h1><hr />
-            <div className={styles.contentParent}>
+            <ul className={styles.contentParent}>
                 {
                     data.map(q =>
                         q ? (
-                            <div key={q.title} className={styles.contentElement}>
+                            <li key={q.title} className={styles.contentElement}>
                                 <iframe frameBorder="0" src={`https://itch.io/embed/${q.id}?bg_color=0a090c&fg_color=ffffff&link_color=a217d9&border_color=43383b`}></iframe>
                                 <div className={styles.aboutCover}>
                                     <h2>
@@ -24,11 +24,11 @@ export default function GameData({ data }) {
                                     </div>
                                 </div>
 
-                            </div>
-                        ) : <p> Nothing to See Here </p>
+                            </li>
+                        ) : <li> Nothing to See Here </li>
                     )
                 }
-            </div>
+            </ul>
         </div>
     );
 }

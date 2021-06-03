@@ -44,31 +44,31 @@ export default function GithubRepo({ data, image }) {
 
 
     return (
-        <div className={styles.contentElement}>
-            {
-                repoData ? <>
-                    <div className={styles.repoLanguages}>
-                        {
-                            colorData.map(({ color, ratio, language }) => (
-                                <div title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
-                            ))
-                        }
-                    </div>
-                    <div className={styles.repoContent}>
-                        {image && <img className={styles.repoCover} src={image} />}
-                        <h2>
-                            <a className={styles.repoTitle} target="_blank" href={repoData.html_url}>
-                                {repoData.name} <i className="fas fa-link" />
-                            </a>
-                        </h2>
-                    </div>
-                    <div className={styles.about}>
-                        About<hr />{repoData.description}
-                    </div>
-                </> : <h2>loading...</h2>
-            }
-
-
-        </div>
+        <ul className={styles.contentParent}>
+            <li className={styles.contentElement}>
+                {
+                    repoData ? <>
+                        <div className={styles.repoLanguages}>
+                            {
+                                colorData.map(({ color, ratio, language }) => (
+                                    <div title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
+                                ))
+                            }
+                        </div>
+                        <div className={styles.repoContent}>
+                            {image && <img className={styles.repoCover} src={image} />}
+                            <h2>
+                                <a className={styles.repoTitle} target="_blank" href={repoData.html_url}>
+                                    {repoData.name} <i className="fas fa-link" />
+                                </a>
+                            </h2>
+                        </div>
+                        <div className={styles.about}>
+                            About<hr />{repoData.description}
+                        </div>
+                    </> : <h2>loading...</h2>
+                }
+            </li>
+        </ul>
     );
 }

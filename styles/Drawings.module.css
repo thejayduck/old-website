@@ -2,8 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
   justify-content: center;
+}
+
+.contentParent {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
 }
 
 .contentElement {
@@ -11,11 +20,11 @@
   border-radius: 0.4rem;
 
   background-color: var(--jet);
-  overflow: hidden;
+
   display: grid;
   margin: 5px;
-  padding: 6px;
-  text-align: center;
+  padding: 5px;
+  align-items: center;
 
   float: left;
 
@@ -63,13 +72,6 @@
   font-size: 17px;
   color: white;
   transition: background-color 230ms ease-in-out;
-}
-
-.column {
-  /* width: 95%; */
-  /* max-width: 50%; */
-  padding: 0 4px;
-  justify-content: center;
 }
 
 .image {
