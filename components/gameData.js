@@ -8,8 +8,8 @@ export default function GameData({ data }) {
                 {
                     data.map(q =>
                         q ? (
-                            <div className={styles.contentElement}>
-                                <iframe frameborder="0" src={`https://itch.io/embed/${q.id}?bg_color=0a090c&fg_color=ffffff&link_color=a217d9&border_color=43383b`}></iframe>
+                            <div key={q.title} className={styles.contentElement}>
+                                <iframe frameBorder="0" src={`https://itch.io/embed/${q.id}?bg_color=0a090c&fg_color=ffffff&link_color=a217d9&border_color=43383b`}></iframe>
                                 <div className={styles.aboutCover}>
                                     <h2>
                                         <a target="_blank" href={q.url}>

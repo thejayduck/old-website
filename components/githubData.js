@@ -10,7 +10,7 @@ export default function GithubData({ data }) {
                 {
                     data.map(q =>
                         q ? (
-                            <GithubRepo data={q.title} image={q.image} />
+                            <GithubRepo key={q.title} data={q.title} image={q.image} />
                         ) : <p> Nothing to See Here </p>
                     )
                 }

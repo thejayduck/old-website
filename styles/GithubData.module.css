@@ -20,11 +20,17 @@
   justify-content: center;
 }
 
+.repoLanguages {
+  display: flex;
+  margin: -5px;
+  flex-direction: row;
+  height: 15px;
+}
+
 .colorData {
   /* content: ""; */
-  position: absolute;
   width: 100%;
-  height: 10%;
+  height: 100%;
   background-color: var(--dark-orchid);
   top: 0%;
   transform: translateY(-50%);

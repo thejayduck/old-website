@@ -1,7 +1,16 @@
 {
     "githubList": [
         {
-            "title": "lightnoveltracker"
+            "title": "thejayduck/thejayduck.github.io",
+            "image": "https://github.com/thejayduck/thejayduck.github.io/blob/master/public/icon_circle_64.png?raw=true"
+        },
+        {
+            "title": "thejayduck/lightnoveltracker",
+            "image": "https://raw.githubusercontent.com/thejayduck/lightnoveltracker/main/public/book.svg"
+        },
+        {
+            "title": "nobbele/BelfastBot",
+            "image": "https://cdn.discordapp.com/avatars/662986656885768212/da2458d267f97293625b935b7d03b7bc.webp"
         }
     ],
     "gameList": [
