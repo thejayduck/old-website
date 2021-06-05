@@ -55,7 +55,7 @@ ul.topnav li.right {
 
 @media screen and (max-width: 600px) {
   .title {
-    visibility: hidden;
+    display: none;
   }
 
   /* ul.topnav li.right,
