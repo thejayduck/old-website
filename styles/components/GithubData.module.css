@@ -9,28 +9,28 @@
 
 .contentElement {
   overflow: hidden;
-
+  /* flex: 1; */
   background-color: var(--jet);
   border-radius: 0.4rem;
-  position: relative;
 
-  display: grid;
+  /* display: grid; */
   margin: 5px;
-  padding: 5px;
-  width: fit-content;
+  /* padding: 5px; */
+  padding-bottom: 10px;
+  width: 493.39px;
   align-items: center;
+  position: relative;
 }
 
 .repoLanguages {
   display: flex;
-  margin: -5px;
+  margin: -1px;
 
-  flex-direction: row;
+  flex-direction: row wrap;
   height: 15px;
 }
 
 .colorData {
-  /* content: ""; */
   width: 100%;
   height: 100%;
   background-color: var(--dark-orchid);
@@ -56,27 +56,36 @@
   max-height: 64px;
   margin: 10px;
 }
+
 .repoContent {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about {
-  overflow-wrap: break-word;
+.repoHomepage {
+  border-radius: 0.4em;
+
   text-align: center;
-  width: 90%;
-  margin: auto;
-  justify-self: center;
+  padding: 14px 16px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  background-color: var(--dark-orchid);
+  transition: background-color 230ms ease-in-out;
+
+  position: absolute;
+  right: 10px;
+}
+
+.repoHomepage:hover {
+  background-color: white;
+  color: black;
 }
 
 @media only screen and (max-width: 720px) {
   .contentElement {
     width: 100%;
-  }
-  .contentElement iframe {
-    /* width: 540px; */
-    width: max-content;
-    justify-self: center;
   }
 }

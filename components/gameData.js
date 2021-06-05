@@ -1,9 +1,10 @@
-import styles from '../styles/GameData.module.css';
+import styles from '../styles/components/GameData.module.css';
+import About from './about';
 
 export default function GameData({ data }) {
     return (
         <div>
-            <h1>Itch.io Projects</h1><hr />
+            <h1>Itch.io Projects <i className="fab fa-itch-io" /></h1><hr />
             <ul className={styles.contentParent}>
                 {
                     data.map(q =>
@@ -16,9 +17,7 @@ export default function GameData({ data }) {
                                             {q.title} <i className="fas fa-link" />
                                         </a>
                                     </h2>
-                                    <div className={styles.about}>
-                                        About<hr />{q.about}
-                                    </div>
+                                    <About about={q.about} />
                                     <div className={styles.gameGenre}>
                                         {q.genre}
                                     </div>

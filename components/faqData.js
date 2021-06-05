@@ -1,4 +1,4 @@
-import styles from '../styles/FAQ.module.css'
+import styles from '../styles/components/FAQ.module.css'
 
 export default function FAQData({ data }) {
     return (
@@ -6,10 +6,10 @@ export default function FAQData({ data }) {
             <h1>FAQ</h1>
             <section>
                 <div className={styles.container}>
-                    <div className={styles.accordion}>
+                    <ul className={styles.accordion}>
                         {
                             data.map((q, idx) =>
-                                <div className={styles.accordionItem} id={`question${idx}`}>
+                                <li key={idx} className={styles.accordionItem} id={`question${idx}`}>
                                     <a className={styles.accordionLink} href={`#question${idx}`}>
                                         Q: {q.question}
                                         <i className={`${styles.icon} fas fa-plus ${styles.faPlus}`}></i>
@@ -20,10 +20,10 @@ export default function FAQData({ data }) {
                                             {q.answer}
                                         </p>
                                     </div>
-                                </div>
+                                </li>
                             )
                         }
-                    </div>
+                    </ul>
                 </div>
             </section>
         </div>

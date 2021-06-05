@@ -6,9 +6,9 @@ export default function DrawingData({ data }) {
     return (
         <ul className={styles.contentParent}>
             {
-                React.Children.toArray(data.map(q =>
+                React.Children.toArray(data.map((q, idx) =>
                     q ? (
-                        <ImageData data={q} />
+                        <ImageData data={q} index={idx} />
                     ) : <p> Nothing to See Here </p>
                 ))
             }

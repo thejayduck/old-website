@@ -8,6 +8,11 @@
   /* padding: 0 1.5rem; */
 }
 
+.accordion {
+  list-style: none;
+  padding: 0;
+}
+
 .accordionItem {
   background-color: var(--jet);
   border-radius: 0.4rem;

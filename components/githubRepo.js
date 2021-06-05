@@ -1,5 +1,6 @@
-import styles from '../styles/GithubData.module.css';
+import styles from '../styles/components/GithubData.module.css';
 import { useEffect, useState } from "react";
+import About from './about';
 
 export default function GithubRepo({ data, image }) {
     const [repoData, setRepoData] = useState(null);
@@ -44,31 +45,28 @@ export default function GithubRepo({ data, image }) {
 
 
     return (
-        <ul className={styles.contentParent}>
-            <li className={styles.contentElement}>
-                {
-                    repoData ? <>
-                        <div className={styles.repoLanguages}>
-                            {
-                                colorData.map(({ color, ratio, language }) => (
-                                    <div title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
-                                ))
-                            }
-                        </div>
-                        <div className={styles.repoContent}>
-                            {image && <img className={styles.repoCover} src={image} />}
-                            <h2>
-                                <a className={styles.repoTitle} target="_blank" href={repoData.html_url}>
-                                    {repoData.name} <i className="fas fa-link" />
-                                </a>
-                            </h2>
-                        </div>
-                        <div className={styles.about}>
-                            About<hr />{repoData.description}
-                        </div>
-                    </> : <h2>loading...</h2>
-                }
-            </li>
-        </ul>
+        <li className={styles.contentElement}>
+            {
+                repoData ? <>
+                    <div className={styles.repoLanguages}>
+                        {
+                            colorData.map(({ color, ratio, language }) => (
+                                <div title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
+
+                            ))
+                        }
+                    </div>
+                    <div className={styles.repoContent}>
+                        {image && <img className={styles.repoCover} src={image} />}
+                        <h2>
+                            <a className={styles.repoTitle} target="_blank" href={repoData.html_url}>
+                                {repoData.name} <i className="fas fa-link" />
+                            </a>
+                        </h2>
+                    </div>
+                    <About about={repoData.description} />
+                </> : <h2>loading...</h2>
+            }
+        </li>
     );
 }

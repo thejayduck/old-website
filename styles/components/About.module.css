@@ -1,0 +1,25 @@
+.about {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  justify-self: center;
+}
+
+.about h3 {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.about h3:before,
+.about h3:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid;
+  margin: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
