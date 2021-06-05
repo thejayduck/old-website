@@ -26,6 +26,7 @@ export default function Projects({ data }) {
             <Navbar />
             <div className={`${styles.pageContent} pageContent`}>
                 <GameData data={data.gameList} />
+                <br />
                 <GithubData data={data.githubList} />
             </div>
         </div>

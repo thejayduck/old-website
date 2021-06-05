@@ -1,7 +1,7 @@
 .about {
   overflow-wrap: break-word;
   text-align: center;
-  width: 90%;
+  width: 95%;
   margin: auto;
   justify-self: center;
 }
@@ -16,6 +16,36 @@
 }
 .about h3:before,
 .about h3:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid;
+  margin: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.category {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  justify-self: center;
+}
+
+.category i {
+  margin-left: 0.45em;
+}
+
+.category h1 {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.category h1:before,
+.category h1:after {
   content: "";
   flex: 1 1;
   border-bottom: 2px solid;

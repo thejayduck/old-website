@@ -1,10 +1,10 @@
 import styles from '../styles/components/GameData.module.css';
-import About from './about';
+import About, { ProjectCategory } from './about';
 
 export default function GameData({ data }) {
     return (
         <div>
-            <h1>Itch.io Projects <i className="fab fa-itch-io" /></h1><hr />
+            <ProjectCategory title="Itch.io Projects" icon="fab fa-itch-io" />
             <ul className={styles.contentParent}>
                 {
                     data.map(q =>

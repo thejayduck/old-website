@@ -1,11 +1,12 @@
 import styles from '../styles/components/GithubData.module.css';
+import { ProjectCategory } from './about';
 import GithubRepo from './githubRepo';
 
 export default function GithubData({ data }) {
 
     return (
         <div>
-            <h1>Github Projects <i className="fab fa-github" /></h1><hr />
+            <ProjectCategory title="Github Projects" icon="fab fa-github" />
             <div className={styles.contentParent}>
                 {
                     data.map(q =>
