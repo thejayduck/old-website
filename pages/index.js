@@ -51,7 +51,6 @@ export default function Home({ data }) {
                         <p>
                             Custom Built Desktop<br />
                             Acer Swift 3 SF314-58G<br />
-                            Wacom Intuos Draw CTL-490<br />
                             Samsung Galaxy Tab S6 Lite
                         </p>
                     </div>
