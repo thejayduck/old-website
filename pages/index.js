@@ -29,7 +29,8 @@ export default function Home({ data }) {
             <div className={`${styles.pageContent} pageContent`}>
                 <h1>I am Arda!</h1>
                 <h3>
-                    And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.<br />
+                    And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.
+                    <br />
                     You can scroll down further to read FAQ.
                 </h3>
                 <div className={styles.toolContainer}>

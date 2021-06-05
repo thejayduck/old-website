@@ -64,7 +64,7 @@ export default function GithubRepo({ data, image }) {
                             </a>
                         </h2>
                     </div>
-                    <About about={repoData.description} />
+                    <About content={repoData.description} />
                 </> : <h2>loading...</h2>
             }
         </li>

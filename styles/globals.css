@@ -43,8 +43,6 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-
-  display: flexbox;
 }
 
 section {
@@ -57,7 +55,7 @@ section {
 }
 
 .pageContent {
-  background-color: var(--rich-black); /* Black w/opacity/see-through */
+  background-color: var(--rich-black);
   color: white;
   border: 3px solid #ffffff;
   border-radius: 0.4em;

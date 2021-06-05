@@ -11,7 +11,9 @@ export default function FAQData({ data }) {
                             data.map((q, idx) =>
                                 <li key={idx} className={styles.accordionItem} id={`question${idx}`}>
                                     <a className={styles.accordionLink} href={`#question${idx}`}>
-                                        Q: {q.question}
+                                        <div>
+                                            <i className="fas fa-question" />{q.question}
+                                        </div>
                                         <i className={`${styles.icon} fas fa-plus ${styles.faPlus}`}></i>
                                         <i className={`${styles.icon} fas fa-minus ${styles.faMinus}`}></i>
                                     </a>

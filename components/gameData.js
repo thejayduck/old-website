@@ -17,7 +17,7 @@ export default function GameData({ data }) {
                                             {q.title} <i className="fas fa-link" />
                                         </a>
                                     </h2>
-                                    <About about={q.about} />
+                                    <About content={q.about} />
                                     <div className={styles.gameGenre}>
                                         {q.genre}
                                     </div>
