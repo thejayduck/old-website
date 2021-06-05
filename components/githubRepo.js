@@ -51,7 +51,7 @@ export default function GithubRepo({ data, image }) {
                     <div className={styles.repoLanguages}>
                         {
                             colorData.map(({ color, ratio, language }) => (
-                                <div title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
+                                <div key={language} title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
 
                             ))
                         }

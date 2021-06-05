@@ -8,7 +8,7 @@ export default function ImageData({ data, index }) {
                 {data.r18 ? (<img className={styles.imageFilter} src={data.url} />) : (<img src={data.url} />)}
                 <div className={styles.warning}>{data.r18 ? (<h1>NSFW</h1>) : <h1 />}</div>
             </div>
-            {(!data.social?.length) ? <null /> :
+            {(!data.social?.length) ? <></> :
                 <div className={styles.link}>
                     <ul>
                         {data.social.map((l, idx) => <li key={idx}><a href={l.url} className={`fab fa-${l.type}`} target="_blank" /></li>)}
