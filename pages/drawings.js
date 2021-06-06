@@ -31,6 +31,7 @@ export default function Drawings({ data }) {
             <div className={`${styles.pageContent} pageContent`}>
                 <DrawingData data={data.drawingList} />
             </div>
+
         </div>
     )
 }

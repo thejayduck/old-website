@@ -1,6 +1,6 @@
 import styles from '../styles/components/GithubData.module.css';
 import { useEffect, useState } from "react";
-import AboutHeader from './about';
+import AboutHeader from './header';
 
 export default function GithubRepo({ data, image }) {
     const [repoData, setRepoData] = useState(null);

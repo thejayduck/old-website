@@ -1,5 +1,5 @@
 import styles from '../styles/components/FAQ.module.css'
-import { Header } from './about'
+import { Header } from './header'
 
 export default function FAQData({ data }) {
     return (

@@ -1,5 +1,5 @@
 import styles from '../styles/components/GithubData.module.css';
-import { Header } from './about';
+import { Header } from './header';
 import GithubRepo from './githubRepo';
 
 export default function GithubData({ data }) {

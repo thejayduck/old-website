@@ -1,5 +1,5 @@
 import styles from '../styles/components/GameData.module.css';
-import AboutHeader, { Header } from './about';
+import AboutHeader, { Header } from './header';
 
 export default function GameData({ data }) {
     return (
@@ -10,7 +10,7 @@ export default function GameData({ data }) {
                     data.map(q =>
                         q ? (
                             <li key={q.title} className={styles.contentElement}>
-                                <iframe frameBorder="0" src={`https://itch.io/embed/${q.id}?bg_color=0a090c&fg_color=ffffff&link_color=a217d9&border_color=43383b`}></iframe>
+                                <iframe frameBorder="0" src={`https://itch.io/embed/${q.id}?bg_color=2a2928&fg_color=ffffff&link_color=a217d9&border_color=2a2928`}></iframe>
                                 <div className={styles.aboutCover}>
                                     <h2>
                                         <a target="_blank" href={q.url}>

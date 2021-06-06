@@ -115,6 +115,7 @@
 @media only screen and (max-width: 720px) {
   .pageContent {
     width: auto;
+    height: auto;
   }
 
   .contentElement {

@@ -1,11 +1,11 @@
 .pageContent {
   overflow: hidden auto;
-  justify-content: center;
 }
 
 @media only screen and (max-width: 720px) {
   .pageContent {
     width: auto;
+    height: auto;
     padding: 20px;
   }
   .contentElement {

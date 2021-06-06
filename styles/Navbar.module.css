@@ -26,7 +26,7 @@ ul.topnav {
   margin: 0 0 58px 0;
   padding: 0;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   background-color: var(--rich-black);
 }
 

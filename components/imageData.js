@@ -11,7 +11,12 @@ export default function ImageData({ data, index }) {
             {(!data.social?.length) ? <></> :
                 <div className={styles.link}>
                     <ul>
-                        {data.social.map((l, idx) => <li key={idx} ><a href={l.url} className={l.type} target="_blank" /></li>)}
+                        {
+                            data.social.map((l, idx) =>
+                                <li key={idx}>
+                                    <a href={l.url} className={l.type} target="_blank" />
+                                </li>)
+                        }
                     </ul>
                 </div>
 

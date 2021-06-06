@@ -23,9 +23,6 @@ export default function Home({ data }) {
                 <meta property="og:description" content="About Page" />
             </Head>
             <Navbar />
-            <div>
-
-            </div>
             <div className={`${styles.pageContent} pageContent`}>
                 <h1>I am Arda!</h1>
                 <h3>

@@ -1,4 +1,4 @@
-import styles from '../styles/components/About.module.css';
+import styles from '../styles/components/Header.module.css';
 
 export default function AboutHeader({ content }) {
     return (
