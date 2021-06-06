@@ -1,6 +1,6 @@
 import styles from '../styles/components/GithubData.module.css';
 import { useEffect, useState } from "react";
-import About from './about';
+import AboutHeader from './about';
 
 export default function GithubRepo({ data, image }) {
     const [repoData, setRepoData] = useState(null);
@@ -64,7 +64,7 @@ export default function GithubRepo({ data, image }) {
                             </a>
                         </h2>
                     </div>
-                    <About content={repoData.description} />
+                    <AboutHeader content={repoData.description} />
                 </> : <h2>loading...</h2>
             }
         </li>

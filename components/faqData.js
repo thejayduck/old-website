@@ -1,9 +1,10 @@
 import styles from '../styles/components/FAQ.module.css'
+import { Header } from './about'
 
 export default function FAQData({ data }) {
     return (
         <div>
-            <h1>FAQ</h1>
+            <Header title="FAQ" />
             <section>
                 <div className={styles.container}>
                     <ul className={styles.accordion}>
