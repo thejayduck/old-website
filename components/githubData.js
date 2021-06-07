@@ -11,7 +11,7 @@ export default function GithubData({ data }) {
                 {
                     data.map(q =>
                         q ? (
-                            <GithubRepo key={q.title} data={q.title} image={q.image} />
+                            <GithubRepo data={q.title} image={q.image} />
                         ) : <p> Nothing to See Here </p>
                     )
                 }
