@@ -2,13 +2,13 @@ import styles from '../styles/components/GithubData.module.css';
 import { useEffect, useState } from "react";
 import AboutHeader from './header';
 
-export default function GithubRepo({ data, image }) {
+export default function GithubRepo({ repoName, image }) {
     const [repoData, setRepoData] = useState(null);
     const [repoLanguages, setRepoLanguages] = useState([]);
     const [colorData, setColorData] = useState([]);
 
     useEffect(async () => {
-        const res = await fetch(`https://api.github.com/repos/${data}`)
+        const res = await fetch(`https://api.github.com/repos/${repoName}`)
         const jsonData = await res.json();
 
         setRepoData({
@@ -22,7 +22,7 @@ export default function GithubRepo({ data, image }) {
 
     useEffect(async () => {
         const res = await fetch(
-            `https://api.github.com/repos/${data}/languages`
+            `https://api.github.com/repos/${repoName}/languages`
         );
         const jsonData = await res.json();
 
