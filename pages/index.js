@@ -30,12 +30,12 @@ export default function Home({ data }) {
                     <br />
                     You can scroll down further to read FAQ.
                 </h3>
-                <div className={styles.toolContainer}>
+                <div className={styles.aboutContainer}>
                     <div className={styles.tool}>
                         <h3>Programming Languages</h3>
                         <p>C#, PHP, Rust*, JavaScript</p>
                     </div>
-                    <div className={styles.tool}>
+                    <div className={styles.aboutItem}>
                         <h3>Software</h3>
                         <p>
                             Visual Studio Code<br />
@@ -44,7 +44,7 @@ export default function Home({ data }) {
                             Unity Engine<br />
                         </p>
                     </div>
-                    <div className={styles.tool}>
+                    <div className={styles.aboutItem}>
                         <h3>Hardware</h3>
                         <p>
                             Custom Built Desktop<br />

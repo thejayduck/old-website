@@ -1,16 +1,15 @@
 .pageContent {
   padding-top: 20px;
   padding-bottom: 20px;
-  overflow: hidden auto;
 }
 
-.toolContainer {
+.aboutContainer {
   padding: 10px;
   background-color: var(--jet);
   border-radius: 0.4em;
 }
 
-.tool {
+.aboutItem {
   border-radius: 0.4rem;
   line-height: 1.8;
   background-color: var(--rich-black);
@@ -18,7 +17,7 @@
   margin: 1rem;
 }
 
-.tool a {
+.aboutItem a {
   text-decoration: none;
   color: white;
 }

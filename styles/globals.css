@@ -66,6 +66,7 @@ section {
   width: 95.65%;
   max-height: 85%;
   overflow: scroll;
+  overflow: hidden auto;
 }
 
 footer {

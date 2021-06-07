@@ -21,10 +21,6 @@
   align-items: center;
 }
 
-.contentElement:hover .aboutCover {
-  opacity: 1;
-}
-
 .contentElement a {
   text-decoration: none;
   color: white;
@@ -39,7 +35,11 @@
   padding: 10px;
 }
 
-.aboutCover {
+.contentElement:hover .aboutOverlay {
+  opacity: 1;
+}
+
+.aboutOverlay {
   opacity: 0;
 
   position: absolute;
@@ -54,7 +54,7 @@
   transition: opacity 230ms ease-in-out;
 }
 
-.gameGenre {
+.genre {
   border: 8px solid rgba(255, 255, 255, 0);
   border-radius: 0.4rem;
   background-color: var(--timberwolf);
