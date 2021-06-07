@@ -1,20 +1,24 @@
-import styles from '../styles/components/ItchioData.module.css';
+import styles from '../styles/components/ItchioGame.module.css';
 import AboutHeader from './header';
+import ProjectItemMotion from './projectItemMotion';
 
-export default function ItchioGame({ data }) {
+export default function ItchioGame({ data, idx }) {
     return (
-        <li className={styles.contentElement}>
-            <div styles={styles.content}>
+        <ProjectItemMotion
+            className={styles.contentElement}
+            idx={idx}
+        >
+            <div className={styles.content}>
                 <img className={styles.cover} src={data.cover_url} />
-                <div>
+                <div className={styles.contentDetails}>
                     <h2>
                         <a className={styles.repoTitle} target="_blank" href={data.url}>
                             {data.title} <i className="fas fa-link" />
                         </a>
                     </h2>
-                    <AboutHeader content={data.short_text} />
+                    {data.short_text && <AboutHeader content={data.short_text} />}
                 </div>
             </div>
-        </li>
+        </ProjectItemMotion>
     );
 }

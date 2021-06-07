@@ -40,13 +40,13 @@ export default function Projects({ data, games }) {
                     data={games}
                     header="Itch.io Projects"
                     icon="fab fa-itch-io"
-                    renderItem={q => <ItchioGame key={q.id} data={q} />}
+                    renderItem={(q, idx) => <ItchioGame key={q.id} data={q} idx={idx} />}
                 />                <br />
                 <ProjectList
                     data={data.githubList}
                     header="Github Projects"
                     icon="fab fa-github"
-                    renderItem={q => <GithubRepo key={q.title} repoName={q.title} image={q.image} />}
+                    renderItem={(q, idx) => <GithubRepo key={q.title} repoName={q.title} image={q.image} idx={idx} />}
                 />
             </div>
         </div>

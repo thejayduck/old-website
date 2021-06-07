@@ -5,35 +5,33 @@
   list-style: none;
   justify-content: center;
   padding: 0;
-
-  margin: 0 0 25px 0;
 }
 
 .contentElement {
-  background-color: var(--jet);
-  border-radius: 0.4rem;
-  position: relative;
-
   display: grid;
-  margin: 5px;
   padding: 5px;
   width: fit-content;
-  align-items: center;
-
-  width: 530px;
-  padding: 10px;
 }
 
 .content {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+}
+
+.contentDetails {
+  background-color: var(--rich-black);
+  padding: 5px;
+  border-radius: 0.4em;
+  width: 100%;
 }
 
 .cover {
   float: left;
   border-radius: 0.4em;
-  max-width: 155px;
-  max-height: 155px;
-  margin: 10px;
+  max-width: 165px;
+  max-height: 165px;
+  margin: 5px;
+  object-fit: cover;
 }
 
 .contentElement a {
@@ -48,6 +46,10 @@
 @media only screen and (max-width: 720px) {
   .contentElement {
     width: 100%;
+  }
+
+  .content {
+    display: block;
   }
 
   .cover {

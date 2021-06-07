@@ -1,23 +1,34 @@
 import { motion } from "framer-motion";
 
-export default function ProjectItemMotion({ children, idx }) {
+export default function ProjectItemMotion({ children, idx, className }) {
     const variants = {
         visible: i => ({
+            y: 0,
             opacity: 1,
             transition: {
                 delay: i * 0.3,
             },
         }),
-        hidden: { opacity: 0 },
+        hidden: { y: -20, opacity: 0 }
     }
     return (
-        <motion.div
+        <motion.li
+            style={{
+                overflow: "hidden",
+                backgroundColor: "var(--jet)",
+                borderRadius: "0.4rem",
+                margin: "5px",
+                width: "493.39px",
+                alignItems: "center",
+                position: "relative",
+            }}
+            className={`${className}`}
             initial="hidden"
             custom={idx}
             animate="visible"
             variants={variants}
         >
             {children}
-        </motion.div>
+        </motion.li>
     );
 }

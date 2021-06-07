@@ -1,8 +1,10 @@
-import styles from '../styles/components/GithubData.module.css';
+import styles from '../styles/components/GithubRepo.module.css';
 import { useEffect, useState } from "react";
 import AboutHeader from './header';
+import ScriptColors from '../scriptColors.json'
+import ProjectItemMotion from './projectItemMotion';
 
-export default function GithubRepo({ repoName, image }) {
+export default function GithubRepo({ repoName, image, idx }) {
     const [repoData, setRepoData] = useState(null);
     const [repoLanguages, setRepoLanguages] = useState([]);
     const [colorData, setColorData] = useState([]);
@@ -30,22 +32,18 @@ export default function GithubRepo({ repoName, image }) {
     }, []);
 
     useEffect(async () => {
-        if (repoData && repoLanguages) {
-            const res = await fetch(
-                `https://api.github.com/gists/564dd064f4eb8688051d55f61d3754ae`
-            );
-            const jsonData = await res.json();
-            const content = JSON.parse(jsonData.files["scriptColors.json"].content);
-
-            const colors = Object.keys(repoLanguages).map(key => ({ color: content[key], ratio: repoLanguages[key], language: key }));
-
+        if (repoLanguages) {
+            const colors = Object.keys(repoLanguages).map(key => ({ color: ScriptColors[key], ratio: repoLanguages[key], language: key }));
             setColorData(colors);
         }
-    }, [repoData, repoLanguages]);
+    }, [repoLanguages]);
 
 
     return (
-        <li className={styles.contentElement}>
+        <ProjectItemMotion
+            className={styles.contentElement}
+            idx={idx}
+        >
             {
                 repoData ? <>
                     <div className={styles.repoLanguages}>
@@ -67,6 +65,6 @@ export default function GithubRepo({ repoName, image }) {
                     <AboutHeader content={repoData.description} />
                 </> : <h2>loading...</h2>
             }
-        </li>
+        </ ProjectItemMotion>
     );
 }
