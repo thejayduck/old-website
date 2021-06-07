@@ -8,7 +8,7 @@ export default function DrawingData({ data }) {
             {
                 React.Children.toArray(data.map((q, idx) =>
                     q ? (
-                        <ImageData data={q} index={idx} />
+                        <ImageData data={q} idx={idx} />
                     ) : <p> Nothing to See Here </p>
                 ))
             }

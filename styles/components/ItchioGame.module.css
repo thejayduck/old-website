@@ -10,7 +10,7 @@
 .contentElement {
   display: grid;
   padding: 5px;
-  width: fit-content;
+  width: 530px;
 }
 
 .content {

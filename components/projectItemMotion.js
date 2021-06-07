@@ -7,6 +7,7 @@ export default function ProjectItemMotion({ children, idx, className }) {
             opacity: 1,
             transition: {
                 delay: i * 0.3,
+                type: "spring",
             },
         }),
         hidden: { y: -20, opacity: 0 }
@@ -18,7 +19,6 @@ export default function ProjectItemMotion({ children, idx, className }) {
                 backgroundColor: "var(--jet)",
                 borderRadius: "0.4rem",
                 margin: "5px",
-                width: "493.39px",
                 alignItems: "center",
                 position: "relative",
             }}

@@ -1,9 +1,14 @@
 import styles from '../styles/Drawings.module.css'
 import React from 'react'
+import ProjectItemMotion from './projectItemMotion';
 
-export default function ImageData({ data, index }) {
+export default function ImageData({ data, idx }) {
     return (
-        <li key={index} className={styles.contentElement}>
+        <ProjectItemMotion
+            key={idx}
+            className={styles.contentElement}
+            idx={idx}
+        >
             <div className={styles.image}>
                 {data.r18 ? (<img className={styles.imageFilter} src={data.url} />) : (<img src={data.url} />)}
                 <div className={styles.warning}>{data.r18 ? (<h1>NSFW</h1>) : <h1 />}</div>
@@ -21,6 +26,6 @@ export default function ImageData({ data, index }) {
                 </div>
 
             }
-        </li>
+        </ProjectItemMotion>
     );
 }
