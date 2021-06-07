@@ -13,29 +13,6 @@
             "image": "https://cdn.discordapp.com/avatars/662986656885768212/da2458d267f97293625b935b7d03b7bc.webp"
         }
     ],
-    "gameList": [
-        {
-            "title": "Treasured Memories",
-            "id": "826293",
-            "genre": "Visual Novel",
-            "about": "30* Minute Visual Novel Submission to Winter VN Jam 2020",
-            "url": "https://thejayduck.itch.io/treasured-memories"
-        },
-        {
-            "title": "Onefold Crush",
-            "id": "710941",
-            "genre": "Visual Novel",
-            "about": "Short Visual Novel Submission to Yaoi Game Jam 2020",
-            "url": "https://thejayduck.itch.io/onefold-crush"
-        },
-        {
-            "title": "Lunar Lander Remake!",
-            "id": "382508",
-            "genre": "Platformer",
-            "about": "Remake of Classic Lunar Lander",
-            "url": "https://thejayduck.itch.io/lunar-lander-remake"
-        }
-    ],
     "drawingList": [
         {
             "url": "https://i.ibb.co/XSBp4PZ/Project-70-3.png",
@@ -48,7 +25,7 @@
             "social": [
                 {
                     "url": "https://www.deviantart.com/thejayduck/art/Some-Character-1-881177115",
-                    "type": "deviantart"
+                    "type": "fab fa-deviantart"
                 }
             ]
         },
