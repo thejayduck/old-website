@@ -2,10 +2,33 @@ import Head from 'next/head'
 import styles from '../styles/Navbar.module.css'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { motion } from 'framer-motion';
 
 function SocialLink({ title, href, icon }) {
+    const iconVariant = {
+        idle: {
+            scale: 1
+        },
+        hover: {
+            scale: 1.2
+        }
+    }
+
     return (
-        <li title={title} className={styles.right}><a href={href} className={icon} target="_blank" /></li>
+        <li
+            title={title} className={styles.right}
+        >
+            <motion.a
+                initial="idle"
+                whileHover="hover"
+                animate="idle"
+
+                href={href}
+                className={icon}
+                target="_blank"
+                variants={iconVariant}
+            />
+        </li >
     );
 }
 
