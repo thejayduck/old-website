@@ -42,12 +42,12 @@ export default function Projects({ data, games }) {
                     icon="fab fa-itch-io"
                     renderItem={(q, idx) => <ItchioGame key={q.id} data={q} idx={idx} />}
                 />                <br />
-                {/* <ProjectList
+                <ProjectList
                     data={data.githubList}
                     header="Github Projects"
                     icon="fab fa-github"
                     renderItem={(q, idx) => <GithubRepo key={q.title} repoName={q.title} image={q.image} idx={idx} />}
-                /> */}
+                />
             </div>
         </div>
     );
