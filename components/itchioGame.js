@@ -12,7 +12,7 @@ export default function ItchioGame({ data, idx }) {
                 <img className={styles.cover} src={data.cover_url} />
                 <div className={styles.contentDetails}>
                     <h2>
-                        <a className={styles.repoTitle} target="_blank" href={data.url}>
+                        <a className={styles.gameTitle} target="_blank" href={data.url}>
                             {data.title} <i className="fas fa-link" />
                         </a>
                     </h2>

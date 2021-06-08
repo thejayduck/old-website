@@ -23,6 +23,11 @@
   padding: 5px;
   border-radius: 0.4em;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cover {
