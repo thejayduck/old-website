@@ -1,19 +1,11 @@
-.container {
+.contentParent {
   width: 100%;
   margin: 0 auto;
-
-  /* padding:  10px; */
-
-  /* max-width: 80rem; */
-  /* padding: 0 1.5rem; */
-}
-
-.accordion {
-  list-style: none;
   padding: 0;
 }
+.contentElement {
+  list-style: none;
 
-.accordionItem {
   background-color: var(--jet);
   border-radius: 0.4rem;
 
@@ -21,13 +13,14 @@
   padding: 1rem;
 }
 
-.accordionLink {
+.accordionContainer {
   text-decoration: none;
   color: white;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 
   padding: 1rem 0;
 }
@@ -38,14 +31,11 @@
 }
 
 .answer {
-  max-height: 0;
   overflow: hidden;
   position: relative;
   border-radius: 0.4rem;
 
   background-color: var(--rich-black);
-
-  transition: max-height 650ms;
 }
 
 .answer::before {
@@ -62,19 +52,4 @@
 .answer p {
   font-size: 1.4rem;
   padding: 1rem;
-}
-
-.accordionItem:target .answer {
-  max-height: 30rem;
-}
-
-.accordionLink .faMinus {
-  display: none;
-}
-
-.accordionItem:target .accordionLink .faPlus {
-  display: none;
-}
-.accordionItem:target .accordionLink .faMinus {
-  display: block;
 }

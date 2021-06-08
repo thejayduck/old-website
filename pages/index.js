@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import AnimatedFAQ from '../components/faqData'
 import FAQData from '../components/faqData'
 import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
