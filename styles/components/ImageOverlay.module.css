@@ -1,0 +1,38 @@
+.ImageOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--rich-black);
+  z-index: 999;
+}
+
+.content {
+  border-radius: 0.4em;
+
+  background-color: var(--jet);
+  width: auto;
+  height: auto;
+  padding: 5px;
+  position: absolute;
+  color: white;
+}
+
+.content img {
+  border-radius: 0.4em;
+  height: 700px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 720px) {
+  .ImageOverlay {
+    display: none;
+  }
+}

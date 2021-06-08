@@ -2,14 +2,17 @@ import styles from '../styles/Drawings.module.css'
 import React from 'react'
 import ProjectItemMotion from './projectItemMotion';
 
-export default function ImageData({ data, idx }) {
+export default function ImageData({ data, idx, onClick }) {
     return (
         <ProjectItemMotion
             key={idx}
             className={styles.contentElement}
             idx={idx}
         >
-            <div className={styles.image}>
+            <div
+                className={styles.image}
+                onClick={onClick}
+            >
                 {data.r18 ? (<img className={styles.imageFilter} src={data.url} />) : (<img src={data.url} />)}
                 <div className={styles.warning}>{data.r18 ? (<h1>NSFW</h1>) : <h1 />}</div>
             </div>
