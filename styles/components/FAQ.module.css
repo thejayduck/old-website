@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 0;
 }
+
 .contentElement {
   list-style: none;
 
@@ -11,6 +12,10 @@
 
   margin-bottom: 1rem;
   padding: 1rem;
+}
+
+.contentElement:hover {
+  cursor: pointer;
 }
 
 .accordionContainer {
