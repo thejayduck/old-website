@@ -12,6 +12,8 @@
   bottom: 0;
   background-color: var(--rich-black);
   z-index: 999;
+
+  user-select: none;
 }
 
 .content {

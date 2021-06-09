@@ -29,6 +29,7 @@
   width: min-content;
   /* width: 400px */
   justify-content: center;
+  user-select: none;
 }
 
 .contentElement:hover .link {
@@ -75,6 +76,8 @@
 .image {
   position: relative;
   display: inline-block;
+
+  cursor: pointer;
 }
 
 .image img {

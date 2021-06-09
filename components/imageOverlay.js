@@ -19,13 +19,15 @@ export default function ImageOverlay({ data, onClick }) {
             <motion.div
                 className={styles.content}
                 initial={{
-                    scale: 0.8
+                    scale: 0.8,
+                    y: -100,
                 }}
                 animate={{
-                    scale: 1
+                    scale: 1,
+                    y: 0,
                 }}
                 exit={{
-                    scale: 0.6
+                    scale: 0.6,
                 }}
             >
                 <img src={data} />
