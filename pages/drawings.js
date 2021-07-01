@@ -1,10 +1,9 @@
+import styles from '../styles/Drawings.module.css'
 import { AnimatePresence } from 'framer-motion'
-import Head from 'next/head'
 import { useState } from 'react'
 import DrawingData from '../components/drawingData'
 import ImageOverlay from '../components/imageOverlay'
-import styles from '../styles/Drawings.module.css'
-import Navbar from "./navbar"
+import PageContent from '../components/pageContent'
 
 export async function getStaticProps() {
     const res = await fetch('https://gist.githubusercontent.com/thejayduck/50a8e7a15ecad2f1b564e51eb1e1e69c/raw')
@@ -23,15 +22,10 @@ export default function Drawings({ data }) {
 
     return (
         <div>
-            <Head>
-                <title>TheJayDuck - DRAWINGS</title>
-                <meta property="og:description" content="Drawings Page" />
-            </Head>
-            <Navbar />
-            <div className={`${styles.pageContent} pageContent`}>
+            <PageContent>
                 <DrawingData data={data.drawingList} onClick={q => setOpenImage(q)} />
-                <AnimatePresence>{openImage && <ImageOverlay data={openImage} onClick={() => setOpenImage(null)} />}</AnimatePresence>
-            </div>
+            </PageContent>
+            <AnimatePresence>{openImage && <ImageOverlay data={openImage} onClick={() => setOpenImage(null)} />}</AnimatePresence>
 
         </div>
     )

@@ -1,15 +1,79 @@
+.projectList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+
+  list-style: none;
+  flex-flow: row wrap;
+}
+
+.projectItem {
+  flex: 1;
+  background-color: var(--color-PrimaryLight);
+  border-radius: var(--border-Radius);
+
+  margin: auto;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  width: 530px;
+  height: 125px;
+
+  overflow: hidden;
+  z-index: 999;
+}
+
+.details {
+  border-radius: var(--border-Radius);
+  background-color: var(--color-Primary);
+
+  flex: 1;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.title i {
+  font-size: 13px;
+}
+
+.cover {
+  border-radius: var(--border-Radius);
+  object-fit: cover;
+
+  width: 135px;
+}
+
 @media only screen and (max-width: 720px) {
-  .pageContent {
-    width: auto;
-    height: auto;
-    padding: 20px;
+  .projectList {
+    flex-flow: column;
+    align-items: unset;
   }
-  .contentElement {
+  .projectItem {
+    width: 90%;
+
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cover {
+    filter: blur(5px) brightness(75%);
+
+    position: absolute;
+    object-fit: cover;
+
     width: 100%;
-  }
-  .contentElement iframe {
-    /* width: 540px; */
-    width: max-content;
-    justify-self: center;
+
+    height: 100%;
+    z-index: -1;
   }
 }

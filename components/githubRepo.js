@@ -1,10 +1,9 @@
 import styles from '../styles/components/GithubRepo.module.css';
 import { useEffect, useState } from "react";
-import AboutHeader from './header';
 import ScriptColors from '../scriptColors.json'
-import ProjectItemMotion from './projectItemMotion';
+import { ProjectItem } from '../pages/projects';
 
-export default function GithubRepo({ repoName, image, idx }) {
+export default function GithubRepo({ repoName, image }) {
     const [repoData, setRepoData] = useState(null);
     const [repoLanguages, setRepoLanguages] = useState([]);
     const [colorData, setColorData] = useState([]);
@@ -40,31 +39,17 @@ export default function GithubRepo({ repoName, image, idx }) {
 
 
     return (
-        <ProjectItemMotion
-            className={styles.contentElement}
-            idx={idx}
-        >
-            {
-                repoData ? <>
-                    <div className={styles.repoLanguages}>
-                        {
-                            colorData.map(({ color, ratio, language }) => (
-                                <div key={language} title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
+        repoData ? <>
+            <ProjectItem title={repoData.name} description={repoData.description} cover={image} url={repoData.html_url}>
+                <div className={styles.repoLanguages}>
+                    {
+                        colorData.map(({ color, ratio, language }) => (
+                            <div key={language} title={language} className={styles.colorData} style={{ backgroundColor: color, flex: ratio }} />
 
-                            ))
-                        }
-                    </div>
-                    <div className={styles.repoContent}>
-                        {image && <img className={styles.repoAvatar} src={image} />}
-                        <h2>
-                            <a className={styles.repoTitle} target="_blank" href={repoData.html_url}>
-                                {repoData.name} <i className="fas fa-link" />
-                            </a>
-                        </h2>
-                    </div>
-                    <AboutHeader content={repoData.description} />
-                </> : <h2>loading...</h2>
-            }
-        </ ProjectItemMotion>
+                        ))
+                    }
+                </div>
+            </ProjectItem>
+        </> : <h2>loading...</h2>
     );
 }

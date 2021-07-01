@@ -10,16 +10,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--rich-black);
+  background-color: var(--color-Primary);
   z-index: 999;
 
   user-select: none;
 }
 
 .content {
-  border-radius: 0.4em;
+  border-radius: var(--border-Radius);
 
-  background-color: var(--jet);
+  background-color: var(--color-PrimaryLight);
   width: auto;
   height: auto;
   padding: 5px;
@@ -28,7 +28,7 @@
 }
 
 .content img {
-  border-radius: 0.4em;
+  border-radius: var(--border-Radius);
   height: 700px;
   object-fit: contain;
 }

@@ -2,12 +2,11 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  list-style: none;
 }
 
 .contentElement {
-  list-style: none;
-
-  background-color: var(--jet);
+  background-color: var(--color-PrimaryLight);
   border-radius: 0.4rem;
 
   margin-bottom: 1rem;
@@ -41,7 +40,7 @@
   border-radius: 0.4rem;
   user-select: none;
 
-  background-color: var(--rich-black);
+  background-color: var(--color-Primary);
 }
 
 .answer::before {
@@ -49,7 +48,7 @@
   position: absolute;
   width: 0.6rem;
   height: 100%;
-  background-color: var(--dark-orchid);
+  background-color: var(--color-Accent);
   top: 50%;
   left: 0;
   transform: translateY(-50%);

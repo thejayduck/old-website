@@ -1,6 +1,6 @@
+import styles from '../styles/components/FAQ.module.css'
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { useState } from 'react';
-import styles from '../styles/components/FAQ.module.css'
 import { Header } from './header.js'
 
 export default function AnimatedFAQ({ data }) {

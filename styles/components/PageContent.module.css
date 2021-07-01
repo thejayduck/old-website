@@ -1,0 +1,27 @@
+.pageContent {
+  background-color: var(--color-Primary);
+  filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.8));
+
+  /* background-color: rgba(41, 5, 5, 0.438); */
+  /* backdrop-filter: blur(10px); */
+
+  color: white;
+  border: 3px solid #ffffff;
+  border-radius: var(--border-Radius);
+  margin: auto;
+  padding: 50px;
+  max-height: 70%;
+
+  text-align: center;
+  overflow: hidden auto;
+
+  flex: 1 1;
+  margin: 3% 2% 2%;
+  border-radius: var(--border-Radius);
+}
+
+@media screen and (max-width: 720px) {
+  .pageContent {
+    padding: 10px;
+  }
+}

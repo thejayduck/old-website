@@ -7,27 +7,17 @@
 } */
 
 :root {
-  --dark-orchid: hsl(283, 81%, 47%);
-  --rich-black: hsl(260, 14%, 4%, 0.9);
-  --jet: hsl(30, 2%, 16%);
-  /* --davys-grey: hsl(36, 3%, 32%); */
-  --timberwolf: hsl(46, 15%, 83%);
+  --color-Accent: hsl(283, 81%, 47%);
+  --color-Primary: hsl(260, 14%, 4%, 0.85);
+  --color-PrimaryLight: hsl(30, 2%, 16%);
+  --color-PrimaryLighter: hsl(46, 15%, 83%);
   --crimson: hsl(352, 70%, 50%); /* OTHER */
+
+  --background-Blur: 5px;
+  --border-Radius: 0.4em;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans);
-
-body {
-  margin: 0;
-}
-
-/* DO NOT REMOVE THE STAR - Otherwise header tags will be bold*/
-* {
-  scroll-behavior: smooth;
-  font-family: "Kumbh Sans", serif;
-  font-weight: lighter;
-  box-sizing: border-box;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html,
 body,
@@ -38,11 +28,25 @@ div#__next > div {
 
 body,
 html {
-  margin: 0;
-  background-image: url("https://i.ibb.co/BqsMCtz/background-fall.png");
+  scroll-behavior: smooth;
+  font-family: "Open Sans", serif;
+  font-weight: lighter;
+
+  background-image: url("https://i.ibb.co/R3hGsG8/background-fall.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  /* -webkit-filter: blur(var(--background-Blur));
+  -moz-filter: blur(var(--background-Blur));
+  -o-filter: blur(var(--background-Blur));
+  -ms-filter: blur(var(--background-Blur));
+  filter: blur(var(--background-Blur)); */
+
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 section {
@@ -52,21 +56,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.pageContent {
-  background-color: var(--rich-black);
-  color: white;
-  border: 3px solid #ffffff;
-  border-radius: 0.4em;
-  margin: auto;
-  padding: 50px;
-
-  text-align: center;
-  width: 95.65%;
-  max-height: 85%;
-  overflow: scroll;
-  overflow: hidden auto;
 }
 
 footer {

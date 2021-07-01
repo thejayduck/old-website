@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import FAQData from '../components/faqData'
 import styles from '../styles/Home.module.css'
-import Navbar from './navbar'
+
+import FAQData from '../components/faqData'
+import PageContent from '../components/pageContent'
 
 export async function getStaticProps() {
     const res = await fetch('https://gist.githubusercontent.com/thejayduck/50a8e7a15ecad2f1b564e51eb1e1e69c/raw')
@@ -18,46 +18,42 @@ export async function getStaticProps() {
 export default function Home({ data }) {
     return (
         <div>
-            <Head>
-                <title>TheJayDuck - ABOUT</title>
-                <meta property="og:description" content="About Page" />
-            </Head>
-            <Navbar />
-            <div className={`${styles.pageContent} pageContent`}>
+            <PageContent>
                 <h1>I am Arda!</h1>
-                <h3>
+                <p>
                     And I'm a programmer, an artist, and a university student. In my free time, I draw original characters and create games/apps.
                     <br />
                     You can scroll down further to read FAQ.
-                </h3>
+                </p>
                 <div className={styles.aboutContainer}>
-                    <div className={styles.tool}>
-                        <h3>Programming Languages</h3>
-                        <p>C#, PHP, Rust*, JavaScript</p>
+                    <div className={styles.aboutWrap}>
+                        <div className={styles.aboutItem}>
+                            <h3>Programming Languages</h3>
+                            <i title="C#" className={`devicon-csharp-plain ${styles.icon}`} />
+                            <i title="Javascript" className={`devicon-javascript-plain ${styles.icon}`} />
+                            <i title="Rust" className={`devicon-rust-plain ${styles.icon}`} />
+                            <i title="PHP" className={`devicon-php-plain ${styles.icon}`} />
+                            {/* <p>C#, PHP, Rust*, JavaScript</p> */}
+                        </div>
+                        <div className={styles.aboutItem}>
+                            <h3>Software</h3>
+                            <span>Visual Studio Code <i className="fas fa-code" /></span><br />
+                            <span>Infinite Painter <i className="fas fa-paint-brush" /></span><br />
+                            <span>Unity Engine <i className="fab fa-unity" /></span>
+                        </div>
+                        <div className={styles.aboutItem}>
+                            <h3>Hardware</h3>
+                            <span>Custom Built Desktop <i className="fas fa-desktop" /></span><br />
+                            <span>Acer Swift 3 SF314-58G <i className="fas fa-laptop" /></span><br />
+                            <span>Samsung Galaxy Tab S6 Lite <i className="fas fa-tablet-alt" /></span>
+                        </div>
                     </div>
-                    <div className={styles.aboutItem}>
-                        <h3>Software</h3>
-                        <p>
-                            Visual Studio Code<br />
-                            MediBang Paint Pro (PC)<br />
-                            Infinite Painter (Android)<br />
-                            Unity Engine<br />
-                        </p>
-                    </div>
-                    <div className={styles.aboutItem}>
-                        <h3>Hardware</h3>
-                        <p>
-                            Custom Built Desktop<br />
-                            Acer Swift 3 SF314-58G<br />
-                            Samsung Galaxy Tab S6 Lite
-                        </p>
-                    </div>
-                    <hr />
-                    <footer>* is put for software/language I am still learning</footer>
+                    {/* <hr /> */}
+                    {/* <footer>* is put for software/language I am still learning</footer> */}
                 </div>
                 <br />
                 <FAQData data={data.faq} />
-            </div>
+            </PageContent>
         </div>
     )
 }

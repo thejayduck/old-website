@@ -1,17 +1,8 @@
-.contentElement {
-  width: 493.39px;
-}
-
-.contentElement a {
-  text-decoration: none;
-  color: white;
-}
-
-.contentElement i {
-  font-size: 13px;
-}
-
 .repoLanguages {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   margin: -1px;
 
@@ -22,44 +13,11 @@
 .colorData {
   width: 100%;
   height: 100%;
-  background-color: var(--dark-orchid);
+  background-color: var(--color-Accent);
   filter: saturate(3);
   top: 0%;
   transform: translateY(-50%);
 }
-
-.repoAvatar {
-  max-width: 64px;
-  max-height: 64px;
-  margin: 10px;
-}
-
-.repoContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* .repoHomepage {
-  border-radius: 0.4em;
-
-  text-align: center;
-  padding: 14px 16px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 17px;
-  color: white;
-  background-color: var(--dark-orchid);
-  transition: background-color 230ms ease-in-out;
-
-  position: absolute;
-  right: 10px;
-}
-
-.repoHomepage:hover {
-  background-color: white;
-  color: black;
-} */
 
 @media only screen and (max-width: 720px) {
   .contentElement {

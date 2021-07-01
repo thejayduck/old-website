@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import styles from '../styles/Projects.module.css'
-import Navbar from "./navbar"
-import ProjectList from '../components/projectList'
-import GithubRepo from '../components/githubRepo'
-import ItchioGame from '../components/itchioGame'
+import styles from "../styles/Projects.module.css"
+
+import { motion } from 'framer-motion';
+
+import PageContent from '../components/pageContent'
+import AboutHeader, { Header } from '../components/header';
+import GithubRepo from '../components/githubRepo';
 
 export async function getStaticProps() {
     //#region Github API
@@ -34,25 +35,70 @@ export async function getStaticProps() {
 export default function Projects({ repos, games }) {
     return (
         <div>
-            <Head>
-                <title>TheJayDuck - PROJECTS</title>
-                <meta property="og:description" content="Projects Page" />
-            </Head>
-            <Navbar />
-            <div className={`${styles.pageContent} pageContent`}>
+            <PageContent>
+                {/* <ul className={styles.projectList}>
+                    <ProjectItem />
+                </ul> */}
                 <ProjectList
                     data={games}
                     header="Itch.io Projects"
                     icon="fab fa-itch-io"
-                    renderItem={(q, idx) => <ItchioGame key={q.id} data={q} idx={idx} />}
-                />                <br />
+                    key={"itchio"}
+                    renderItem={q => <ProjectItem key={q.id} title={q.title} description={q.short_text} cover={q.cover_url} url={q.url} />}
+                />
                 <ProjectList
                     data={repos.githubList}
                     header="Github Projects"
                     icon="fab fa-github"
-                    renderItem={(q, idx) => <GithubRepo key={q.title} repoName={q.title} image={q.image} idx={idx} />}
+                    key={"github"}
+                    renderItem={q => <GithubRepo key={q.id} repoName={q.title} image={q.image} />}
                 />
-            </div>
+            </PageContent>
         </div>
+    );
+}
+
+export function ProjectItem({ title, description, cover, url, children }) {
+    return (
+        <motion.li
+            className={styles.projectItem}
+            initial={{
+                y: -20,
+                opacity: 0
+            }}
+            animate={{
+                y: 0,
+                opacity: 1,
+            }}
+            transition={{ type: "spring" }}
+        >
+            {children}
+            <img className={styles.cover} src={cover} />
+            <div className={styles.details}>
+                <a className={styles.title} target="_blank" href={url} >
+                    {title} <i className="fas fa-fw fa-link" />
+                </a>
+                <AboutHeader content={description} />
+            </div>
+        </motion.li>
+    );
+}
+
+export function ProjectList({ renderItem, data, header, icon }) {
+    return (
+        <div>
+            <Header title={header} icon={icon} />
+            <ul className={styles.projectList} >
+                {
+                    data.map((q, idx) =>
+                        q ? (
+                            <div key={idx}>
+                                {renderItem(q, idx)}
+                            </div>
+                        ) : <li> Nothing to See Here </li>
+                    )
+                }
+            </ul>
+        </div >
     );
 }

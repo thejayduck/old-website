@@ -1,15 +1,10 @@
-.pageContent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .contentParent {
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
   list-style: none;
   justify-content: center;
+  align-items: center;
   padding: 0;
 }
 
@@ -17,7 +12,7 @@
   position: relative;
   border-radius: 0.4rem;
 
-  background-color: var(--jet);
+  background-color: var(--color-PrimaryLight);
 
   display: grid;
   margin: 5px;
@@ -43,7 +38,7 @@
   bottom: 10px;
   border: 8px solid rgba(255, 255, 255, 0);
   border-radius: 0.4rem;
-  background-color: var(--rich-black);
+  background-color: var(--color-Primary);
   width: 300px;
   margin: 10px;
   padding: 0;
@@ -83,7 +78,7 @@
 .image img {
   /* width: 100%; */
   /* width: 350px; */
-  border-radius: 0.4em;
+  border-radius: var(--border-Radius);
   height: 350px;
   object-fit: contain;
 }
@@ -115,11 +110,9 @@
 }
 
 @media only screen and (max-width: 720px) {
-  .pageContent {
-    width: auto;
-    height: auto;
+  .contentParent {
+    flex-flow: column;
   }
-
   .contentElement {
     flex: none;
     float: none;

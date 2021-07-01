@@ -1,20 +1,27 @@
-.pageContent {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.aboutContainer {
+  background-color: var(--color-PrimaryLight);
+  border-radius: var(--border-Radius);
 }
 
-.aboutContainer {
-  padding: 10px;
-  background-color: var(--jet);
-  border-radius: 0.4em;
+.aboutWrap {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  /* flex-flow: row; */
 }
 
 .aboutItem {
-  border-radius: 0.4rem;
+  /* width: 100%; */
+  border-radius: var(--border-Radius);
   line-height: 1.8;
-  background-color: var(--rich-black);
-  padding: 0.1rem;
-  margin: 1rem;
+  background-color: var(--color-Primary);
+  padding: 10px;
+  margin: 10px;
+}
+
+.aboutItem .icon {
+  font-size: 40px;
+  margin: 5px;
 }
 
 .aboutItem a {
@@ -23,9 +30,11 @@
 }
 
 @media screen and (max-width: 720px) {
-  .pageContent {
+  .aboutWrap {
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  .aboutItem {
     width: auto;
-    height: auto;
-    padding: 20px;
   }
 }

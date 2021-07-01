@@ -1,13 +1,28 @@
 import styles from '../styles/Drawings.module.css'
 import React from 'react'
-import ProjectItemMotion from './projectItemMotion';
+import { motion } from 'framer-motion';
 
 export default function ImageData({ data, idx, onClick }) {
+    const variants = {
+        visible: i => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: i * 0.3,
+                type: "spring",
+            },
+        }),
+        hidden: { y: -20, opacity: 0 }
+    }
+
     return (
-        <ProjectItemMotion
+        <motion.li
+            initial="hidden"
+            animate="visible"
+            custom={idx}
             key={idx}
+            variants={variants}
             className={styles.contentElement}
-            idx={idx}
         >
             <div
                 className={styles.image}
@@ -29,6 +44,6 @@ export default function ImageData({ data, idx, onClick }) {
                 </div>
 
             }
-        </ProjectItemMotion>
+        </motion.li>
     );
 }
