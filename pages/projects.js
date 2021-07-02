@@ -72,7 +72,6 @@ export function ProjectItem({ title, description, cover, url, children }) {
             }}
             transition={{ type: "spring" }}
         >
-            {children}
             <img className={styles.cover} src={cover} />
             <div className={styles.details}>
                 <a className={styles.title} target="_blank" href={url} >
@@ -80,6 +79,7 @@ export function ProjectItem({ title, description, cover, url, children }) {
                 </a>
                 <AboutHeader content={description} />
             </div>
+            {children}
         </motion.li>
     );
 }

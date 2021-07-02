@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   padding: 0;
 
   list-style: none;
@@ -10,18 +10,21 @@
 }
 
 .projectItem {
-  flex: 1;
+  border: 1px solid white;
   background-color: var(--color-PrimaryLight);
   border-radius: var(--border-Radius);
 
+  flex: 1;
+  display: flex;
   margin: auto;
   position: relative;
-  display: flex;
   gap: 5px;
   padding: 5px;
+  padding: 10px;
   width: 530px;
   height: 125px;
 
+  user-select: none;
   overflow: hidden;
   z-index: 999;
 }
