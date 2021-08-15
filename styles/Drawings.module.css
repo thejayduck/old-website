@@ -78,7 +78,7 @@
 .image img {
   /* width: 100%; */
   /* width: 350px; */
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
   height: 350px;
   object-fit: contain;
 }

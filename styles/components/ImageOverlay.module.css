@@ -17,7 +17,7 @@
 }
 
 .content {
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
 
   background-color: var(--color-PrimaryLight);
   width: auto;
@@ -28,7 +28,7 @@
 }
 
 .content img {
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
   height: 700px;
   object-fit: contain;
 }

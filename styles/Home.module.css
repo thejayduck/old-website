@@ -1,6 +1,6 @@
 .aboutContainer {
   background-color: var(--color-PrimaryLight);
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
 }
 
 .aboutWrap {
@@ -12,7 +12,7 @@
 
 .aboutItem {
   /* width: 100%; */
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
   line-height: 1.8;
   background-color: var(--color-Primary);
   padding: 10px;

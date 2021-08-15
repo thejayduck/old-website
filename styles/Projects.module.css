@@ -12,13 +12,13 @@
 .projectItem {
   border: 1px solid white;
   background-color: var(--color-PrimaryLight);
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
 
   flex: 1;
   display: flex;
   margin: auto;
   position: relative;
-  gap: 5px;
+  margin: 5px;
   padding: 5px;
   padding: 10px;
   width: 530px;
@@ -30,7 +30,7 @@
 }
 
 .details {
-  border-radius: var(--border-Radius);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
   background-color: var(--color-Primary);
 
   flex: 1;
@@ -50,7 +50,7 @@
 }
 
 .cover {
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
   object-fit: cover;
 
   width: 135px;
@@ -67,6 +67,9 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+  }
+  .details {
+    border-radius: var(--border-radius);
   }
   .cover {
     filter: blur(5px) brightness(75%);

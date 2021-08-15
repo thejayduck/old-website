@@ -36,19 +36,16 @@ export default function Projects({ repos, games }) {
     return (
         <div>
             <PageContent>
-                {/* <ul className={styles.projectList}>
-                    <ProjectItem />
-                </ul> */}
                 <ProjectList
                     data={games}
-                    header="Itch.io Projects"
+                    header="Itch.io"
                     icon="fab fa-itch-io"
                     key={"itchio"}
                     renderItem={q => <ProjectItem key={q.id} title={q.title} description={q.short_text} cover={q.cover_url} url={q.url} />}
                 />
                 <ProjectList
                     data={repos.githubList}
-                    header="Github Projects"
+                    header="Github"
                     icon="fab fa-github"
                     key={"github"}
                     renderItem={q => <GithubRepo key={q.id} repoName={q.title} image={q.image} />}

@@ -7,17 +7,18 @@
 
   color: white;
   border: 3px solid #ffffff;
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
   margin: auto;
   padding: 50px;
   max-height: 70%;
 
   text-align: center;
-  overflow: hidden auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   flex: 1 1;
   margin: 3% 2% 2%;
-  border-radius: var(--border-Radius);
+  border-radius: var(--border-radius);
 }
 
 @media screen and (max-width: 720px) {

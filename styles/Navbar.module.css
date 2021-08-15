@@ -28,6 +28,10 @@
 .linkWrap {
   display: flex;
   flex-direction: row-reverse;
+  overflow: hidden;
+
+  background-color: var(--color-Primary);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
 .socialWrap {
@@ -61,6 +65,9 @@
     display: none;
   }
   .linkWrap {
+    background-color: none;
+    border-radius: 0;
+
     flex-direction: column-reverse;
     justify-content: center;
   }
